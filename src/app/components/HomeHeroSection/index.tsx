@@ -9,7 +9,7 @@ export default function HomeHeroSection() {
           <h1 className="text-6xl max-w-2xl lg:max-w-none lg:text-9xl font-semibold">
             Qual o tamanho do seu sonho?
           </h1>
-          <h2 className="text-2xl max-w-xl lg:max-w-4xl mt-12 mx-auto flex lg:text-4xl">
+          <h2 className="text-xl max-w-xl lg:max-w-4xl mt-12 mx-auto flex lg:text-4xl">
             Trabalhamos para ajudar pessoas como você a ter uma vida melhor a
             partir do crédito consignado.
           </h2>
