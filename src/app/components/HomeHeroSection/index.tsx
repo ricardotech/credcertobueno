@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import TextType from "../TextType";
+import { Button } from "@/components/ui/button";
 
 export default function HomeHeroSection() {
   const [showH2, setShowH2] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   return (
     <section className="relative w-full flex items-center justify-center overflow-hidden max-h-[calc(100vh-70px)] bg-[#FFF]">
@@ -23,12 +25,17 @@ export default function HomeHeroSection() {
             <TextType
               text="Trabalhamos para ajudar pessoas como você a ter uma vida melhor a partir do crédito consignado."
               as="h2"
-              className="text-xl max-w-xl lg:max-w-4xl mt-12 mx-auto flex lg:text-4xl"
-              speed={15}
-              delay={300}
+              className="text-xl max-w-xl lg:max-w-4xl mt-6 lg:mt-12 mx-auto flex lg:text-4xl"
+              speed={40}
               cursor={true}
               cursorClassName="text-[#1C4200]"
+              onComplete={() => setShowButton(true)}
             />
+          )}
+          {showButton && (
+            <Button className="hidden lg:flex mt-6 lg:mt-12 bg-[#8FDB00] hover:bg-[#8FDB00] hover:text-black cursor-pointer p-5 py-8 text-lg lg:text-2xl text-black w-full lg:max-w-sm flex mx-auto">
+              Simule seu crédito
+            </Button>
           )}
         </div>
       </div>

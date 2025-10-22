@@ -20,7 +20,7 @@ export default function GlobalHeader() {
           </div>
           <div className="flex items-center">
             <AiOutlineMenu size={25} color="#000" className="flex lg:hidden" />
-            <Button className="hidden lg:flex bg-[#8FDB00] p-5 text-black">
+            <Button className="hidden lg:flex bg-[#8FDB00] p-5 text-black hover:bg-[#8FDB00] hover:text-black ">
               Simule seu crédito
             </Button>
           </div>
