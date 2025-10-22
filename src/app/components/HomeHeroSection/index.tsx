@@ -10,8 +10,8 @@ export default function HomeHeroSection() {
 
   return (
     <section className="relative w-full flex items-center justify-center overflow-hidden max-h-[calc(100vh-70px)] bg-[#FFF]">
-      <div className="relative w-full flex flex-col lg:flex-row justify-between items-center h-[calc(100vh-70px)] bg-[#FFF] text-[#1C4200] max-w-7xl mx-auto">
-        <div className="p-4 lg:px-0 text-left lg:text-center w-full h-full flex pt-[60px] lg:pt-[0px] justify-between lg:justify-center flex-col">
+      <div className="relative w-full flex flex-col lg:flex-row justify-between items-center h-[calc(100vh-70px)] bg-[#FFF] text-[#1C4200] max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="text-left lg:text-center w-full h-full flex pt-[60px] lg:pt-[0px] justify-between lg:justify-center flex-col">
           <div>
             <TextType
               text="Qual o tamanho do seu sonho?"
