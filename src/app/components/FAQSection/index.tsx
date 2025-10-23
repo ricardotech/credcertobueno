@@ -162,7 +162,7 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ List */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="rounded-2xl overflow-hidden">
           <div className="divide-y divide-gray-200">
             {faqs.map((faq, index) => (
               <FAQItem
