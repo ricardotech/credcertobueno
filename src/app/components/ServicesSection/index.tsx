@@ -45,7 +45,9 @@ function ServiceCard({
 
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
-        animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+        animate={
+          isInView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }
+        }
         transition={{
           duration: 0.5,
           delay: index * 0.2 + 0.2,
@@ -99,9 +101,7 @@ function ServiceCard({
               ease: [0.25, 0.1, 0.25, 1],
             }}
           >
-            <Button
-              className="w-full justify-center bg-[#8FDB00] hover:bg-[#7BC700] text-black font-semibold transition-all duration-300"
-            >
+            <Button className="w-full justify-center bg-[#8FDB00] hover:bg-[#7BC700] text-black font-semibold transition-all duration-300">
               Saiba mais
               <svg
                 className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
@@ -134,42 +134,48 @@ export default function ServicesSection() {
       description:
         "Seu carro é o caminho para conseguir valores de até R$ 150 mil, com parcelas que cabem no orçamento.",
       hasLink: true,
-      imageUrl: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
+      imageUrl:
+        "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
     },
     {
       title: "Empréstimo com garantia de imóvel",
       description:
         "Seu imóvel abre portas para você ter um crédito de até R$ 3 milhões com as menores taxas do mercado.",
       hasLink: true,
-      imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+      imageUrl:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
     },
     {
       title: "Empréstimo consignado privado",
       description:
         "Crédito exclusivo para funcionários de empresas privadas, com desconto em folha e taxas especiais.",
       hasLink: true,
-      imageUrl: "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80",
+      imageUrl:
+        "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80",
     },
     {
       title: "Antecipação do FGTS",
       description:
         "Antecipe seu FGTS com condições especiais e conquiste mais liberdade financeira. Use seu benefício para realizar planos, quitar dívidas ou investir no que realmente importa!",
       hasLink: true,
-      imageUrl: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
+      imageUrl:
+        "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
     },
     {
       title: "Crédito Consignado",
       description:
         "Trabalhamos para ajudar mais pessoas como você a ter uma vida melhor a partir do crédito consignado. Conquiste uma folga financeira!",
       hasLink: true,
-      imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+      imageUrl:
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
     },
     {
       title: "Consignado para CLT",
       description:
         "Empréstimo exclusivo para trabalhadores CLT, com taxas mais baixas do que os demais empréstimos e aprovação ainda mais fácil.",
       hasLink: true,
-      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+      imageUrl:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
     },
   ];
 
@@ -213,12 +219,8 @@ export default function ServicesSection() {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={32}
             slidesPerView={1}
-            navigation
+            navigation={window.innerWidth >= 1024 ? true : false}
             pagination={{ clickable: true }}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -233,19 +235,19 @@ export default function ServicesSection() {
                 spaceBetween: 32,
               },
             }}
-            className="!pb-16 !px-12"
+            className="!pb-12"
           >
-          {services.map((service, index) => (
-            <SwiperSlide key={index} className="!h-auto !flex">
-              <ServiceCard
-                title={service.title}
-                description={service.description}
-                hasLink={service.hasLink}
-                index={index}
-                imageUrl={service.imageUrl}
-              />
-            </SwiperSlide>
-          ))}
+            {services.map((service, index) => (
+              <SwiperSlide key={index} className="!h-auto !flex">
+                <ServiceCard
+                  title={service.title}
+                  description={service.description}
+                  hasLink={service.hasLink}
+                  index={index}
+                  imageUrl={service.imageUrl}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
@@ -266,12 +268,12 @@ export default function ServicesSection() {
 
         .swiper-button-next,
         .swiper-button-prev {
-          color: #9CA3AF !important;
+          color: #9ca3af !important;
           background: white;
           width: 36px !important;
           height: 36px !important;
           border-radius: 50%;
-          border: 1px solid #E5E7EB;
+          border: 1px solid #e5e7eb;
           box-shadow: none;
           transition: all 0.3s ease;
           padding: 8px;
@@ -287,8 +289,8 @@ export default function ServicesSection() {
 
         .swiper-button-next:hover,
         .swiper-button-prev:hover {
-          border-color: #D1D5DB;
-          color: #6B7280 !important;
+          border-color: #d1d5db;
+          color: #6b7280 !important;
         }
 
         .swiper-button-next::after,
@@ -298,7 +300,7 @@ export default function ServicesSection() {
         }
 
         .swiper-pagination-bullet {
-          background: #1C4200 !important;
+          background: #1c4200 !important;
           opacity: 0.3;
           width: 12px !important;
           height: 12px !important;
@@ -307,7 +309,7 @@ export default function ServicesSection() {
 
         .swiper-pagination-bullet-active {
           opacity: 1;
-          background: #8FDB00 !important;
+          background: #8fdb00 !important;
           width: 32px !important;
           border-radius: 6px !important;
         }

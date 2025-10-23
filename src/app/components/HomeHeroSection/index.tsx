@@ -35,7 +35,7 @@ export default function HomeHeroSection() {
             )}
           </div>
           {showButton && (
-            <Button className="hidden lg:flex mt-6 lg:mt-12 bg-[#8FDB00] hover:bg-[#8FDB00] hover:text-black cursor-pointer p-5 py-8 text-lg lg:text-2xl text-black w-full lg:max-w-sm flex mx-auto lg:mx-0">
+            <Button className="hidden mb-12 lg:flex mt-6 lg:mt-12 bg-[#8FDB00] hover:bg-[#8FDB00] hover:text-black cursor-pointer p-5 py-8 text-lg lg:text-2xl text-black w-full lg:max-w-sm flex mx-auto lg:mx-0">
               Simule seu crédito
             </Button>
           )}
