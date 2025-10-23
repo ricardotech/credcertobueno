@@ -72,7 +72,7 @@ function TestimonialCard({
         }}
         className="text-[#1C4200]/80 text-base lg:text-lg leading-relaxed mb-6 flex-1 italic"
       >
-        "{text}"
+        &ldquo;{text}&rdquo;
       </motion.p>
 
       {/* Rating */}

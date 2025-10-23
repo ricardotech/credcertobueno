@@ -16,10 +16,19 @@ function KPICard({ prefix, value, label, index }: KPICardProps) {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const icons = [
-    <FaUsers className="text-[#1C4200] text-4xl mb-4 mx-auto" />,
-    <FaBuilding className="text-[#1C4200] text-4xl mb-4 mx-auto" />,
-    <FaStar className="text-[#1C4200] text-4xl mb-4 mx-auto" />,
-    <FaCalendarAlt className="text-[#1C4200] text-4xl mb-4 mx-auto" />,
+    <FaUsers
+      key="kpi-users"
+      className="text-[#1C4200] text-4xl mb-4 mx-auto"
+    />,
+    <FaBuilding
+      key="kpi-building"
+      className="text-[#1C4200] text-4xl mb-4 mx-auto"
+    />,
+    <FaStar key="kpi-star" className="text-[#1C4200] text-4xl mb-4 mx-auto" />,
+    <FaCalendarAlt
+      key="kpi-calendar"
+      className="text-[#1C4200] text-4xl mb-4 mx-auto"
+    />,
   ];
 
   return (
