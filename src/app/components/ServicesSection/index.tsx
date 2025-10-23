@@ -219,7 +219,7 @@ export default function ServicesSection() {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={32}
             slidesPerView={1}
-            navigation={window.innerWidth >= 1024 ? true : false}
+            navigation={typeof window !== "undefined" && window.innerWidth >= 1024 ? true : false}
             pagination={{ clickable: true }}
             breakpoints={{
               640: {
