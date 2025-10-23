@@ -1,7 +1,7 @@
 import GlobalHeader from "./components/Header";
 import HomeHeroSection from "./components/HomeHeroSection";
 import ServicesSection from "./components/ServicesSection";
-import BankPartnersSection from "./components/BankPartnersSection";
+import KPIsSection from "./components/KPIsSection";
 
 export default function MainPage() {
   return (
@@ -9,7 +9,7 @@ export default function MainPage() {
       <GlobalHeader />
       <HomeHeroSection />
       <ServicesSection />
-      <BankPartnersSection />
+      <KPIsSection />
     </main>
   );
 }
