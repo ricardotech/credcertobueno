@@ -91,39 +91,33 @@ export default function DifferentialsSection() {
   const differentials = [
     {
       icon: <TrendingDown className="w-8 h-8" />,
-      title: "Taxas Competitivas",
-      description:
-        "As menores taxas do mercado com condições flexíveis que cabem no seu bolso",
+      title: "Taxas competitivas",
+      description: "As melhores condições do mercado",
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Aprovação Rápida",
-      description:
-        "Análise em até 24h e crédito liberado rapidamente para você não perder tempo",
+      title: "Aprovação rápida",
+      description: "Análise em até 24 horas úteis",
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: "100% Online",
-      description:
-        "Todo o processo digital, do pedido à aprovação, sem burocracia ou deslocamento",
+      title: "100% online",
+      description: "Contratação sem burocracia",
     },
     {
       icon: <UserCheck className="w-8 h-8" />,
-      title: "Consultoria Gratuita",
-      description:
-        "Especialistas dedicados para encontrar a melhor solução para seu perfil",
+      title: "Consultoria gratuita",
+      description: "Especialistas prontos para ajudar",
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Segurança Garantida",
-      description:
-        "Dados protegidos e parceria com instituições regulamentadas pelo Banco Central",
+      title: "Segurança garantida",
+      description: "Parceiros autorizados pelo Banco Central",
     },
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Flexibilidade",
-      description:
-        "Prazos e parcelas ajustados ao seu orçamento e necessidades",
+      description: "Prazos e parcelas que cabem no orçamento",
     },
   ];
 
@@ -157,7 +151,7 @@ export default function DifferentialsSection() {
             }}
             className="text-xl lg:text-2xl text-[#1C4200]/70 max-w-3xl mx-auto"
           >
-            Vantagens que fazem a diferença na sua jornada financeira
+            Benefícios que fazem diferença no seu bolso
           </motion.p>
         </div>
 

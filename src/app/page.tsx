@@ -3,6 +3,7 @@ import HomeHeroSection from "./components/HomeHeroSection";
 import StatisticsSection from "./components/StatisticsSection";
 import AboutSection from "./components/AboutSection";
 import LocationsSection from "./components/LocationsSection";
+import LocationMapSection from "./components/LocationMapSection";
 import ServicesSection from "./components/ServicesSection";
 import DifferentialsSection from "./components/DifferentialsSection";
 import HowItWorksSection from "./components/HowItWorksSection";
@@ -25,6 +26,7 @@ export default function MainPage() {
       <HowItWorksSection />
       <UseCasesSection />
       <LocationsSection />
+      <LocationMapSection />
       <TestimonialsSection />
       <PartnersSection />
       <FAQSection />

@@ -14,7 +14,7 @@ export default function HomeHeroSection() {
         <div className="text-left lg:text-center w-full h-full flex pt-[60px] lg:pt-[0px] justify-between lg:justify-center flex-col">
           <div>
             <TextType
-              text="Qual o tamanho do seu sonho?"
+              text="Qual o tamanho do seu sonho? Nós ajudamos você a realizá-lo."
               as="h1"
               className="text-left text-5xl max-w-3xl lg:max-w-none lg:text-9xl font-semibold"
               speed={70}
@@ -24,7 +24,7 @@ export default function HomeHeroSection() {
             />
             {showH2 && (
               <TextType
-                text="Trabalhamos para ajudar pessoas como você a ter uma vida melhor a partir do crédito consignado."
+                text="A CredCertoBueno facilita o acesso ao crédito consignado e às melhores linhas de empréstimo do mercado — rápido, seguro e sem burocracia."
                 as="h2"
                 className="text-left text-xl max-w-xl lg:max-w-4xl mt-6 lg:mt-12 flex lg:text-4xl"
                 speed={40}
@@ -36,7 +36,7 @@ export default function HomeHeroSection() {
           </div>
           {showButton && (
             <Button className="hidden mb-12 lg:flex mt-6 lg:mt-12 bg-[#8FDB00] hover:bg-[#8FDB00] hover:text-black cursor-pointer p-5 py-8 text-lg lg:text-2xl text-black w-full lg:max-w-sm flex mx-auto lg:mx-0">
-              Simule seu crédito
+              Simule seu crédito agora
             </Button>
           )}
         </div>

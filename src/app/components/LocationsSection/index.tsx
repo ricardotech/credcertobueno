@@ -111,14 +111,14 @@ export default function LocationsSection() {
     {
       title: "Nossa Sede",
       description:
-        "Estrutura moderna e completa, equipada para oferecer o melhor atendimento e suporte aos nossos clientes e parceiros.",
+        "Moderna, completa e pronta para receber você.",
       imageUrl: "/headquarter.webp",
       icon: <Building2 className="w-8 h-8" />,
     },
     {
       title: "Loja Física",
       description:
-        "Ambiente acolhedor e profissional onde você é atendido com excelência, transparência e todo o cuidado que você merece.",
+        "Atendimento acolhedor, consultoria especializada e total transparência.",
       imageUrl: "/store-front.webp",
       icon: <MapPin className="w-8 h-8" />,
     },
@@ -156,8 +156,7 @@ export default function LocationsSection() {
             }}
             className="text-lg lg:text-xl text-[#1C4200]/70 max-w-3xl mx-auto leading-relaxed"
           >
-            Espaços planejados para proporcionar a melhor experiência em crédito
-            consignado, combinando conforto, segurança e profissionalismo.
+            Ambientes pensados para atender você com conforto e segurança
           </motion.p>
         </div>
 

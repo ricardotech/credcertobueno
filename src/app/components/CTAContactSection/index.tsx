@@ -73,7 +73,7 @@ export default function CTAContactSection() {
             }}
             className="text-4xl lg:text-6xl font-semibold text-[#1C4200] mb-6"
           >
-            Pronto para dar o próximo passo?
+            Fale com um Especialista
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ export default function CTAContactSection() {
             }}
             className="text-xl lg:text-2xl text-[#1C4200]/70 max-w-3xl mx-auto"
           >
-            Fale com um especialista e descubra a melhor solução para você
+            Pronto para conquistar seu crédito com segurança e as melhores taxas?
           </motion.p>
         </div>
 

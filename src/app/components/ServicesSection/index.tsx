@@ -130,25 +130,25 @@ export default function ServicesSection() {
 
   const services = [
     {
-      title: "Empréstimo com garantia de veículo",
+      title: "Empréstimo com Garantia de Veículo",
       description:
-        "Seu carro é o caminho para conseguir valores de até R$ 150 mil, com parcelas que cabem no orçamento.",
+        "Use seu carro como garantia e tenha acesso a crédito de até R$ 150 mil, com parcelas acessíveis e taxas reduzidas.",
       hasLink: true,
       imageUrl:
         "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
     },
     {
-      title: "Empréstimo com garantia de imóvel",
+      title: "Empréstimo com Garantia de Imóvel",
       description:
-        "Seu imóvel abre portas para você ter um crédito de até R$ 3 milhões com as menores taxas do mercado.",
+        "Seu imóvel pode liberar até R$ 3 milhões com as menores taxas do mercado e prazos flexíveis.",
       hasLink: true,
       imageUrl:
         "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
     },
     {
-      title: "Empréstimo consignado privado",
+      title: "Empréstimo Consignado Privado",
       description:
-        "Crédito exclusivo para funcionários de empresas privadas, com desconto em folha e taxas especiais.",
+        "Crédito exclusivo para funcionários CLT de empresas privadas com desconto direto em folha e juros mais baixos.",
       hasLink: true,
       imageUrl:
         "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80",
@@ -156,15 +156,15 @@ export default function ServicesSection() {
     {
       title: "Antecipação do FGTS",
       description:
-        "Antecipe seu FGTS com condições especiais e conquiste mais liberdade financeira. Use seu benefício para realizar planos, quitar dívidas ou investir no que realmente importa!",
+        "Antecipe o saque futuro do FGTS com condições especiais e use o valor para quitar dívidas, realizar projetos ou investir.",
       hasLink: true,
       imageUrl:
         "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
     },
     {
-      title: "Crédito Consignado",
+      title: "Crédito Consignado INSS",
       description:
-        "Trabalhamos para ajudar mais pessoas como você a ter uma vida melhor a partir do crédito consignado. Conquiste uma folga financeira!",
+        "INSS, aposentados e pensionistas têm acesso a crédito com as melhores taxas e aprovação facilitada.",
       hasLink: true,
       imageUrl:
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
@@ -172,7 +172,7 @@ export default function ServicesSection() {
     {
       title: "Consignado para CLT",
       description:
-        "Empréstimo exclusivo para trabalhadores CLT, com taxas mais baixas do que os demais empréstimos e aprovação ainda mais fácil.",
+        "Trabalhadores com carteira assinada podem contratar crédito consignado com juros menores que empréstimos padrão.",
       hasLink: true,
       imageUrl:
         "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
@@ -195,7 +195,7 @@ export default function ServicesSection() {
             }}
             className="text-5xl lg:text-7xl font-semibold text-[#1C4200] mb-6"
           >
-            Te damos o crédito pra você mudar de vida
+            Nossos Serviços de Crédito
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -209,7 +209,7 @@ export default function ServicesSection() {
             }}
             className="text-xl lg:text-2xl text-[#1C4200]/70 max-w-3xl"
           >
-            Serviços que transformam seus sonhos em realidade.
+            Escolha a opção ideal para o seu objetivo financeiro
           </motion.p>
         </div>
 

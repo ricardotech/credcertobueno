@@ -135,7 +135,7 @@ export default function TestimonialsSection() {
     {
       name: "Maria Silva",
       age: 42,
-      text: "Consegui realizar o sonho da reforma da minha casa com taxas justas e um atendimento excepcional. Recomendo de olhos fechados!",
+      text: "Consegui reformar minha casa com taxas justas e atendimento excepcional.",
       rating: 5,
       avatarUrl:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
@@ -143,7 +143,7 @@ export default function TestimonialsSection() {
     {
       name: "João Oliveira",
       age: 35,
-      text: "Processo super rápido e transparente. Em menos de 24h o crédito estava na minha conta. Equipe muito atenciosa e profissional!",
+      text: "Processo rápido! Em menos de 24h o crédito estava na conta.",
       rating: 5,
       avatarUrl:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
@@ -151,7 +151,7 @@ export default function TestimonialsSection() {
     {
       name: "Ana Costa",
       age: 28,
-      text: "Melhor decisão financeira que tomei este ano. Consegui consolidar minhas dívidas com uma taxa muito menor e parcelas que cabem no meu bolso.",
+      text: "Consolidei minhas dívidas com uma taxa muito menor. Recomendo!",
       rating: 5,
       avatarUrl:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
@@ -159,18 +159,10 @@ export default function TestimonialsSection() {
     {
       name: "Carlos Santos",
       age: 51,
-      text: "A consultoria foi fundamental para mim. Me ajudaram a escolher o melhor produto para minha situação sem empurrar nada. Muito profissionalismo!",
+      text: "Consultoria clara, sem empurrar produtos. Excelente atendimento!",
       rating: 5,
       avatarUrl:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
-    },
-    {
-      name: "Paula Ferreira",
-      age: 39,
-      text: "Transparência do início ao fim. Sem surpresas, sem taxas escondidas. Exatamente o que prometeram na simulação. Empresa séria e confiável!",
-      rating: 5,
-      avatarUrl:
-        "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&q=80",
     },
   ];
 
@@ -190,7 +182,7 @@ export default function TestimonialsSection() {
             }}
             className="text-4xl lg:text-6xl font-semibold text-[#1C4200] mb-6"
           >
-            O que nossos clientes dizem
+            Depoimentos de Clientes Reais
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -204,7 +196,7 @@ export default function TestimonialsSection() {
             }}
             className="text-xl lg:text-2xl text-[#1C4200]/70 max-w-3xl mx-auto"
           >
-            Histórias reais de pessoas que transformaram suas vidas
+            Histórias de quem transformou sua vida com a CredCertoBueno
           </motion.p>
         </div>
 

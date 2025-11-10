@@ -86,33 +86,32 @@ export default function UseCasesSection() {
     {
       icon: <Plane className="w-8 h-8" />,
       title: "Realizar sonhos",
-      description:
-        "Viagem dos sonhos, casamento, festa ou aquele projeto especial",
+      description: "Viagem, festa, casamento, projeto especial",
     },
     {
       icon: <PiggyBank className="w-8 h-8" />,
       title: "Organizar finanças",
-      description: "Consolidar dívidas, pagar contas e retomar o controle",
+      description: "Quitar dívidas e equilibrar o orçamento",
     },
     {
       icon: <GraduationCap className="w-8 h-8" />,
       title: "Investir no futuro",
-      description: "Educação, cursos, qualificação profissional",
+      description: "Educação e qualificação",
     },
     {
       icon: <Home className="w-8 h-8" />,
       title: "Reformar a casa",
-      description: "Melhorias, decoração, ampliação do seu lar",
+      description: "Melhorias e ampliação",
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Cuidar da saúde",
-      description: "Tratamentos, cirurgias, bem-estar da família",
+      description: "Tratamentos e bem-estar",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Empreender",
-      description: "Abrir negócio, capital de giro, investir em você",
+      description: "Abrir negócio ou capital de giro",
     },
   ];
 
@@ -137,7 +136,7 @@ export default function UseCasesSection() {
             }}
             className="text-4xl lg:text-6xl font-semibold text-white mb-6"
           >
-            O crédito certo para cada momento da sua vida
+            O Crédito Certo para Cada Momento da Sua Vida
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -151,7 +150,7 @@ export default function UseCasesSection() {
             }}
             className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto"
           >
-            Seja qual for o seu objetivo, estamos aqui para ajudar
+            Transforme seus objetivos em realidade
           </motion.p>
         </div>
 

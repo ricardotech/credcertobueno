@@ -111,17 +111,17 @@ export default function StatisticsSection() {
     {
       icon: <Users className="w-8 h-8" />,
       value: "+25000",
-      label: "Empréstimos realizados",
+      label: "Empréstimos aprovados",
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
       value: "+10",
-      label: "Anos de mercado",
+      label: "Anos de experiência",
     },
     {
       icon: <Star className="w-8 h-8" />,
       value: "5",
-      label: "Avaliação média no Google",
+      label: "Avaliação no Google",
       suffix: "/5.0",
     },
   ];

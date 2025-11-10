@@ -49,17 +49,17 @@ export default function AboutSection() {
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Eficiência",
-      description: "Processos ágeis e digitais para sua comodidade",
+      description: "Processos digitais e aprovação rápida",
     },
     {
       icon: <Eye className="w-6 h-6" />,
       title: "Transparência",
-      description: "Sem taxas ocultas ou surpresas desagradáveis",
+      description: "Sem taxas escondidas",
     },
     {
       icon: <Award className="w-6 h-6" />,
       title: "Excelência",
-      description: "Atendimento personalizado e consultoria especializada",
+      description: "Consultoria personalizada para cada cliente",
     },
   ];
 
@@ -104,11 +104,11 @@ export default function AboutSection() {
               className="border-l-4 border-[#8FDB00] pl-6 mb-8"
             >
               <h2 className="text-4xl lg:text-6xl font-semibold text-[#1C4200] mb-6">
-                Transformando sonhos em realidade
+                Transformamos crédito em oportunidade
               </h2>
             </motion.div>
 
-            {/* <motion.p
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={
                 isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
@@ -120,11 +120,9 @@ export default function AboutSection() {
               }}
               className="text-lg lg:text-xl text-[#1C4200]/70 leading-relaxed mb-8"
             >
-              Com mais de uma década de experiência, a CredCertoBueno se
-              consolidou como referência em soluções de crédito personalizadas.
-              Nossa missão é democratizar o acesso ao crédito com transparência,
-              agilidade e as melhores condições do mercado.
-            </motion.p> */}
+              Nossa equipe trabalha para oferecer soluções financeiras seguras,
+              com transparência e excelência no atendimento.
+            </motion.p>
 
             <div className="space-y-4">
               {pillars.map((pillar, index) => (

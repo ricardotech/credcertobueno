@@ -68,7 +68,7 @@ export default function PartnersSection() {
             }}
             className="text-4xl lg:text-6xl font-semibold text-[#1C4200] mb-6"
           >
-            Parceiros que garantem segurança e credibilidade
+            Nossos Parceiros
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export default function PartnersSection() {
             }}
             className="text-xl lg:text-2xl text-[#1C4200]/70 max-w-3xl mx-auto"
           >
-            Trabalhamos com as principais instituições financeiras do país
+            Instituições financeiras confiáveis e autorizadas pelo Banco Central
           </motion.p>
         </div>
 

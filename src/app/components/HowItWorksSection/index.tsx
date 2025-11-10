@@ -107,15 +107,15 @@ export default function HowItWorksSection() {
       icon: <Search className="w-6 h-6" />,
       title: "Simule Online",
       description:
-        "Escolha o tipo de crédito ideal e faça uma simulação em segundos, sem compromisso",
+        "Faça uma simulação em segundos, sem compromisso.",
       imageUrl:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80",
     },
     {
       icon: <FileText className="w-6 h-6" />,
-      title: "Envie Documentos",
+      title: "Envie seus Documentos",
       description:
-        "Upload rápido e seguro dos documentos necessários direto pela plataforma",
+        "Upload rápido e seguro direto pela plataforma.",
       imageUrl:
         "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=400&q=80",
     },
@@ -123,7 +123,7 @@ export default function HowItWorksSection() {
       icon: <CheckCircle className="w-6 h-6" />,
       title: "Análise Rápida",
       description:
-        "Nossa equipe analisa seu perfil e encontra a melhor opção com nossos parceiros",
+        "Encontramos a melhor oferta de acordo com seu perfil.",
       imageUrl:
         "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
     },
@@ -131,7 +131,7 @@ export default function HowItWorksSection() {
       icon: <Wallet className="w-6 h-6" />,
       title: "Receba o Crédito",
       description:
-        "Aprovado! O valor é depositado na sua conta em até 24 horas úteis",
+        "Após aprovação, o valor cai em sua conta em até 24 horas úteis.",
       imageUrl:
         "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=400&q=80",
     },
@@ -153,7 +153,7 @@ export default function HowItWorksSection() {
             }}
             className="text-4xl lg:text-6xl font-semibold text-[#1C4200] mb-6"
           >
-            Como funciona? Simples assim:
+            Como Funciona?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -165,9 +165,9 @@ export default function HowItWorksSection() {
               delay: 0.2,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="text-xl lg:text-2xl text-[#1C4200]/70 max-w-3xl mx-auto"
+            className="text-lg lg:text-xl text-[#1C4200]/70 max-w-3xl mx-auto leading-relaxed"
           >
-            Em apenas 4 passos você consegue o crédito que precisa
+            Crédito rápido e simples em 4 passos
           </motion.p>
         </div>
 
