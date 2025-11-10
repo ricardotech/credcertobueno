@@ -56,7 +56,7 @@ function StepCard({
 
         {/* Content */}
         <div className="flex-1 text-center lg:text-left">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{
@@ -67,7 +67,7 @@ function StepCard({
             className="mb-4 inline-flex p-3 bg-[#8FDB00]/10 text-[#1C4200]"
           >
             {icon}
-          </motion.div>
+          </motion.div> */}
           <motion.h3
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
