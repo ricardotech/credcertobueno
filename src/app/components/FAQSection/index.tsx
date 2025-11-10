@@ -35,7 +35,7 @@ function FAQItem({ question, answer, index, isOpen, onToggle }: FAQItemProps) {
         <span className="text-lg lg:text-xl font-semibold text-[#1C4200] pr-8 group-hover:text-[#8FDB00] transition-colors duration-200">
           {question}
         </span>
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8FDB00]/10 flex items-center justify-center group-hover:bg-[#8FDB00]/20 transition-all duration-200">
+        <div className="flex-shrink-0 w-8 h-8 bg-[#8FDB00]/10 flex items-center justify-center group-hover:bg-[#8FDB00]/20 transition-all duration-200">
           {isOpen ? (
             <Minus className="w-5 h-5 text-[#1C4200]" />
           ) : (
@@ -162,7 +162,7 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ List */}
-        <div className="rounded-2xl overflow-hidden">
+        <div className="overflow-hidden">
           <div className="divide-y divide-gray-200">
             {faqs.map((faq, index) => (
               <FAQItem

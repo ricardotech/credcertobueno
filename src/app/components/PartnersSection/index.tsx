@@ -24,9 +24,9 @@ function PartnerCard({ name, logoUrl, index }: PartnerCardProps) {
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="group relative bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-[#8FDB00]/30 flex items-center justify-center min-h-[120px]"
+      className="group relative flex items-center justify-center min-h-[120px] p-4"
     >
-      <div className="relative w-full h-16 grayscale group-hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100">
+      <div className="relative w-full h-full lg:h-16 transition-all duration-300">
         <Image
           src={logoUrl}
           alt={`${name} - Parceiro CredCertoBueno`}
@@ -44,30 +44,12 @@ export default function PartnersSection() {
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-50px" });
 
   const partners = [
-    {
-      name: "Banco BMG",
-      logoUrl: "https://placehold.co/200x80/e5e7eb/6b7280?text=BMG",
-    },
-    {
-      name: "Banco C6",
-      logoUrl: "https://placehold.co/200x80/e5e7eb/6b7280?text=C6+Bank",
-    },
-    {
-      name: "Facta Financeira",
-      logoUrl: "https://placehold.co/200x80/e5e7eb/6b7280?text=Facta",
-    },
-    {
-      name: "Crefisa",
-      logoUrl: "https://placehold.co/200x80/e5e7eb/6b7280?text=Crefisa",
-    },
-    {
-      name: "UY3",
-      logoUrl: "https://placehold.co/200x80/e5e7eb/6b7280?text=UY3",
-    },
-    {
-      name: "Socinal S.A.",
-      logoUrl: "https://placehold.co/200x80/e5e7eb/6b7280?text=Socinal",
-    },
+    { name: "Banco do Brasil", logoUrl: "/bb.png" },
+    { name: "Banco BMG", logoUrl: "/bmg.png" },
+    { name: "C6 Bank", logoUrl: "/c6.png" },
+    { name: "Crefisa", logoUrl: "/crefisa.png" },
+    { name: "Banco PAN", logoUrl: "/pan.png" },
+    { name: "Caixa Econômica Federal", logoUrl: "/caixa.png" },
   ];
 
   return (

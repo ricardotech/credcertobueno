@@ -40,10 +40,10 @@ function TestimonialCard({
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#8FDB00]/30 h-full flex flex-col"
+      className="group relative bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#8FDB00]/30 h-full flex flex-col"
     >
       {/* Decorative gradient border on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#8FDB00]/0 to-[#8FDB00]/0 group-hover:from-[#8FDB00]/5 group-hover:to-[#1C4200]/5 transition-all duration-300 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#8FDB00]/0 to-[#8FDB00]/0 group-hover:from-[#8FDB00]/5 group-hover:to-[#1C4200]/5 transition-all duration-300 -z-10"></div>
 
       {/* Quote Icon */}
       <motion.div
@@ -109,7 +109,7 @@ function TestimonialCard({
         }}
         className="flex items-center gap-4"
       >
-        <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-[#8FDB00]/30">
+        <div className="relative w-14 h-14 overflow-hidden flex-shrink-0 border-2 border-[#8FDB00]/30">
           <Image
             src={avatarUrl}
             alt={name}
@@ -261,7 +261,6 @@ export default function TestimonialsSection() {
           background: white;
           width: 36px !important;
           height: 36px !important;
-          border-radius: 50%;
           border: 1px solid #e5e7eb;
           box-shadow: none;
           transition: all 0.3s ease;
@@ -299,8 +298,6 @@ export default function TestimonialsSection() {
         .swiper-pagination-bullet-active {
           opacity: 1;
           background: #8fdb00 !important;
-          width: 32px !important;
-          border-radius: 6px !important;
         }
       `}</style>
     </section>

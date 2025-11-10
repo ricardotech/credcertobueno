@@ -37,10 +37,10 @@ function DifferentialCard({
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#8FDB00]/30 hover:-translate-y-2"
+      className="group relative bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#8FDB00]/30 hover:-translate-y-2"
     >
       {/* Decorative gradient border on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#8FDB00]/0 to-[#8FDB00]/0 group-hover:from-[#8FDB00]/5 group-hover:to-[#1C4200]/5 transition-all duration-300 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#8FDB00]/0 to-[#8FDB00]/0 group-hover:from-[#8FDB00]/5 group-hover:to-[#1C4200]/5 transition-all duration-300 -z-10"></div>
 
       <motion.div
         initial={{ scale: 0 }}
@@ -50,7 +50,7 @@ function DifferentialCard({
           delay: index * 0.1 + 0.2,
           ease: [0.34, 1.56, 0.64, 1],
         }}
-        className="mb-6 p-4 rounded-full bg-[#8FDB00]/10 text-[#1C4200] w-fit"
+        className="mb-6 p-4 bg-[#8FDB00]/10 text-[#1C4200] w-fit"
       >
         {icon}
       </motion.div>

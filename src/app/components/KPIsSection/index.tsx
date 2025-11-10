@@ -120,8 +120,8 @@ export default function KPIsSection() {
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-0 left-1/4 w-32 h-32 bg-[#8FDB00]/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-[#1C4200]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-32 h-32 bg-[#8FDB00]/5 blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-[#1C4200]/5 blur-3xl"></div>
       </div>
     </section>
   );

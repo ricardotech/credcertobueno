@@ -187,7 +187,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
+                className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
@@ -196,7 +196,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
+                className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
@@ -205,7 +205,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
+                className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
@@ -214,7 +214,7 @@ export default function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
+                className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
                 aria-label="YouTube"
               >
                 <Youtube className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />

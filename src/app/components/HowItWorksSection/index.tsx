@@ -49,31 +49,9 @@ function StepCard({
             delay: index * 0.2 + 0.2,
             ease: [0.34, 1.56, 0.64, 1],
           }}
-          className="flex-shrink-0 w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-br from-[#8FDB00] to-[#7BC700] flex items-center justify-center text-white font-bold text-2xl lg:text-3xl shadow-lg"
+          className="flex-shrink-0 w-16 h-16 lg:w-36 lg:h-36 bg-gradient-to-br from-[#8FDB00] to-[#7BC700] flex items-center justify-center text-white font-bold text-2xl lg:text-3xl shadow-lg"
         >
           {number}
-        </motion.div>
-
-        {/* Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={
-            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
-          }
-          transition={{
-            duration: 0.6,
-            delay: index * 0.2 + 0.3,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
-          className="relative w-full lg:w-48 h-48 rounded-xl overflow-hidden flex-shrink-0"
-        >
-          <Image
-            src={imageUrl}
-            alt={title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 192px"
-          />
         </motion.div>
 
         {/* Content */}
@@ -86,7 +64,7 @@ function StepCard({
               delay: index * 0.2 + 0.4,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="mb-4 inline-flex p-3 rounded-lg bg-[#8FDB00]/10 text-[#1C4200]"
+            className="mb-4 inline-flex p-3 bg-[#8FDB00]/10 text-[#1C4200]"
           >
             {icon}
           </motion.div>
@@ -116,20 +94,6 @@ function StepCard({
           </motion.p>
         </div>
       </motion.div>
-
-      {/* Connector Line */}
-      {!isLast && (
-        <motion.div
-          initial={{ scaleY: 0 }}
-          animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
-          transition={{
-            duration: 0.6,
-            delay: index * 0.2 + 0.7,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
-          className="hidden lg:block absolute left-10 top-20 w-0.5 h-24 bg-gradient-to-b from-[#8FDB00] to-[#8FDB00]/30 origin-top"
-        />
-      )}
     </div>
   );
 }

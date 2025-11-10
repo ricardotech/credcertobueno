@@ -32,7 +32,7 @@ function UseCaseCard({ icon, title, description, index }: UseCaseCardProps) {
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300"
+      className="group relative bg-white/10 backdrop-blur-sm p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300"
     >
       <motion.div
         initial={{ scale: 0, rotate: -180 }}
@@ -44,7 +44,7 @@ function UseCaseCard({ icon, title, description, index }: UseCaseCardProps) {
           delay: index * 0.1 + 0.2,
           ease: [0.34, 1.56, 0.64, 1],
         }}
-        className="mb-6 p-4 rounded-full bg-white/20 text-white w-fit group-hover:bg-white/30 transition-all duration-300"
+        className="mb-6 p-4 bg-white/20 text-white w-fit group-hover:bg-white/30 transition-all duration-300"
       >
         {icon}
       </motion.div>

@@ -91,7 +91,7 @@ export default function CTAContactSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 gap-12 lg:gap-16 items-center">
           {/* Form Side */}
           <motion.div
             ref={formRef}
@@ -103,7 +103,7 @@ export default function CTAContactSection() {
               duration: 0.8,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="relative bg-[#F9FAFB] rounded-2xl p-8 lg:p-10 border border-gray-100"
+            className="relative bg-[#F9FAFB] p-8 lg:p-10 border border-gray-100 max-w-[600px] w-full mx-auto"
           >
             {isSubmitted ? (
               <motion.div
@@ -111,7 +111,7 @@ export default function CTAContactSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="flex flex-col items-center justify-center py-12"
               >
-                <div className="w-16 h-16 bg-[#8FDB00] rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-[#8FDB00] flex items-center justify-center mb-6">
                   <Send className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-semibold text-[#1C4200] mb-3">
@@ -138,7 +138,7 @@ export default function CTAContactSection() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
                     placeholder="Digite seu nome"
                   />
                 </div>
@@ -158,7 +158,7 @@ export default function CTAContactSection() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -178,7 +178,7 @@ export default function CTAContactSection() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
                     placeholder="(00) 00000-0000"
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function CTAContactSection() {
                     value={formData.creditType}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
                   >
                     <option value="">Selecione uma opção</option>
                     <option value="veiculo">
@@ -230,7 +230,7 @@ export default function CTAContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white resize-none"
+                    className="w-full px-4 py-3 border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white resize-none"
                     placeholder="Conte-nos mais sobre suas necessidades..."
                   />
                 </div>
@@ -243,88 +243,8 @@ export default function CTAContactSection() {
                   Solicitar Contato
                   <Send className="ml-2 w-5 h-5" />
                 </Button>
-
-                {/* WhatsApp Alternative */}
-                <div className="relative">
-                  <div className="absolute inset-0 flex items-center">
-                    <div className="w-full border-t border-gray-300"></div>
-                  </div>
-                  <div className="relative flex justify-center text-sm">
-                    <span className="px-4 bg-[#F9FAFB] text-[#1C4200]/60">
-                      ou
-                    </span>
-                  </div>
-                </div>
-
-                <Button
-                  type="button"
-                  onClick={handleWhatsApp}
-                  className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold py-6 text-lg transition-all duration-300"
-                >
-                  <MessageCircle className="mr-2 w-5 h-5" />
-                  Falar no WhatsApp
-                </Button>
               </form>
             )}
-          </motion.div>
-
-          {/* Image/Content Side */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={
-              isFormInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
-            }
-            transition={{
-              duration: 0.8,
-              delay: 0.2,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-            className="relative"
-          >
-            <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden mb-8">
-              <Image
-                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80"
-                alt="Atendimento CredCertoBueno"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1C4200]/40 to-transparent"></div>
-            </div>
-
-            <div className="space-y-6">
-              <h3 className="text-2xl lg:text-3xl font-semibold text-[#1C4200]">
-                Por que entrar em contato?
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Consultoria gratuita e personalizada",
-                  "Análise completa do seu perfil",
-                  "Apresentação das melhores opções",
-                  "Atendimento ágil e transparente",
-                  "Suporte em todas as etapas",
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={
-                      isFormInView
-                        ? { opacity: 1, x: 0 }
-                        : { opacity: 0, x: -20 }
-                    }
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.3 + index * 0.1,
-                      ease: [0.25, 0.1, 0.25, 1],
-                    }}
-                    className="flex items-center gap-3 text-[#1C4200]/80 text-lg"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-[#8FDB00]"></div>
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
           </motion.div>
         </div>
       </div>

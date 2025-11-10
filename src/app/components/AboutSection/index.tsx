@@ -26,9 +26,9 @@ function PillarCard({ icon, title, description, index }: PillarCardProps) {
         delay: index * 0.15,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="flex items-start gap-4 p-6 rounded-xl bg-white/50 backdrop-blur-sm border border-[#8FDB00]/20 hover:border-[#8FDB00]/40 transition-all duration-300"
+      className="flex items-start gap-4 p-6 bg-white/50 backdrop-blur-sm border border-[#8FDB00]/20 hover:border-[#8FDB00]/40 transition-all duration-300"
     >
-      <div className="flex-shrink-0 p-3 rounded-lg bg-[#8FDB00]/10 text-[#1C4200]">
+      <div className="flex-shrink-0 p-3 bg-[#8FDB00]/10 text-[#1C4200]">
         {icon}
       </div>
       <div>
@@ -78,7 +78,7 @@ export default function AboutSection() {
               duration: 0.8,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden"
+            className="relative h-[400px] lg:h-[600px] overflow-hidden"
           >
             <Image
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
@@ -104,11 +104,11 @@ export default function AboutSection() {
               className="border-l-4 border-[#8FDB00] pl-6 mb-8"
             >
               <h2 className="text-4xl lg:text-6xl font-semibold text-[#1C4200] mb-6">
-                Transformando sonhos em conquistas desde 2010
+                Transformando sonhos em realidade
               </h2>
             </motion.div>
 
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={
                 isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
@@ -124,7 +124,7 @@ export default function AboutSection() {
               consolidou como referência em soluções de crédito personalizadas.
               Nossa missão é democratizar o acesso ao crédito com transparência,
               agilidade e as melhores condições do mercado.
-            </motion.p>
+            </motion.p> */}
 
             <div className="space-y-4">
               {pillars.map((pillar, index) => (

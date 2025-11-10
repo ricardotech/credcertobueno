@@ -68,7 +68,7 @@ function StatCard({ icon, value, label, index, suffix = "" }: StatCardProps) {
           delay: index * 0.1 + 0.2,
           ease: [0.34, 1.56, 0.64, 1],
         }}
-        className="mb-4 p-4 rounded-full bg-[#8FDB00]/10 text-[#1C4200]"
+        className="mb-4 p-4 bg-[#8FDB00]/10 text-[#1C4200]"
       >
         {icon}
       </motion.div>
@@ -110,31 +110,26 @@ export default function StatisticsSection() {
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
-      value: "+250000",
-      label: "Clientes atendidos mensalmente",
+      value: "+25000",
+      label: "Empréstimos realizados",
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
-      value: "+150",
-      label: "Consultores especializados",
+      value: "+10",
+      label: "Anos de mercado",
     },
     {
       icon: <Star className="w-8 h-8" />,
-      value: "4.9",
+      value: "5",
       label: "Avaliação média no Google",
       suffix: "/5.0",
-    },
-    {
-      icon: <Calendar className="w-8 h-8" />,
-      value: "2010",
-      label: "Atuando no mercado desde",
     },
   ];
 
   return (
     <section className="relative w-full flex items-center justify-center bg-[#F9FAFB] py-16 lg:py-24">
       <div className="relative w-full max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {stats.map((stat, index) => (
             <StatCard
               key={index}
