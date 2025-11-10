@@ -53,7 +53,7 @@ function LocationCard({
             src={imageUrl}
             alt={title}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
+            className="object-cover transition-transform duration-700 lg:group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, 50vw"
             priority={index === 0}
           />
@@ -72,7 +72,7 @@ function LocationCard({
             delay: index * 0.2 + 0.4,
             ease: [0.34, 1.56, 0.64, 1],
           }}
-          className="absolute top-6 right-6 p-4 bg-[#8FDB00] text-[#1C4200] shadow-lg group-hover:scale-110 transition-transform duration-300"
+          className="absolute top-6 right-6 p-4 bg-[#8FDB00] text-[#1C4200] shadow-lg lg:group-hover:scale-110 transition-transform duration-300"
         >
           {icon}
         </motion.div>

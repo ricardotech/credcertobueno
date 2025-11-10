@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} antialiased font-sans`}
+        className={`${dmSans.variable} antialiased font-sans overflow-x-hidden`}
         suppressHydrationWarning
       >
         {children}

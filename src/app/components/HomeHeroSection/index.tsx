@@ -73,7 +73,8 @@ export default function HomeHeroSection() {
           pagination={{
             clickable: true,
             bulletClass: "swiper-pagination-bullet !bg-white/50 !w-3 !h-3",
-            bulletActiveClass: "swiper-pagination-bullet-active !bg-white !w-8",
+            bulletActiveClass:
+              "swiper-pagination-bullet-active !bg-white !w-3 !h-3",
           }}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           className="w-full h-[100vh] hero-swiper"
