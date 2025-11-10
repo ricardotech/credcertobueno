@@ -164,13 +164,13 @@ export default function HomeHeroSection() {
                   {heroSlides[activeIndex]?.ctaText}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button
+                {/* <Button
                   size="lg"
                   variant="outline"
                   className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-base lg:text-lg px-8 py-6 lg:py-7 rounded-full transition-all duration-300"
                 >
                   Saiba mais
-                </Button>
+                </Button> */}
               </motion.div>
             </motion.div>
 
