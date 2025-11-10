@@ -59,9 +59,9 @@ export default function HomeHeroSection() {
   ];
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] max-h-[900px] overflow-hidden">
+    <section className="relative w-full h-[100vh] min-h-[600px]  overflow-hidden">
       {/* Background Swiper */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 h-[100vh]">
         <Swiper
           modules={[Autoplay, EffectFade, Pagination]}
           effect="fade"
@@ -76,7 +76,7 @@ export default function HomeHeroSection() {
             bulletActiveClass: "swiper-pagination-bullet-active !bg-white !w-8",
           }}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-          className="w-full h-full hero-swiper"
+          className="w-full h-[100vh] hero-swiper"
           loop={true}
         >
           {heroSlides.map((slide) => (
@@ -86,7 +86,7 @@ export default function HomeHeroSection() {
                   src={slide.image}
                   alt={slide.title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-[75%_center] sm:object-center"
                   priority={slide.id === 1}
                   quality={90}
                   sizes="100vw"
@@ -174,7 +174,7 @@ export default function HomeHeroSection() {
             </motion.div>
 
             {/* Trust Indicators */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 1 }}
@@ -206,7 +206,7 @@ export default function HomeHeroSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
