@@ -48,7 +48,8 @@ export default function LocationMapSection() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Endereço",
-      content: "Av. Cachoeira Dourada, 20 - 040 - Vila São Joaquim, Anápolis - GO, 75145-040",
+      content:
+        "Av. Cachoeira Dourada, 20 - 040 - Vila São Joaquim, Anápolis - GO, 75145-040",
     },
     {
       icon: <Clock className="w-6 h-6" />,

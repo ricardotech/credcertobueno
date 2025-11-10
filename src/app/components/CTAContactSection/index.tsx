@@ -87,7 +87,8 @@ export default function CTAContactSection() {
             }}
             className="text-xl lg:text-2xl text-[#1C4200]/70 max-w-3xl mx-auto"
           >
-            Pronto para conquistar seu crédito com segurança e as melhores taxas?
+            Pronto para conquistar seu crédito com segurança e as melhores
+            taxas?
           </motion.p>
         </div>
 

@@ -110,8 +110,7 @@ export default function LocationsSection() {
   const locations = [
     {
       title: "Nossa Sede",
-      description:
-        "Moderna, completa e pronta para receber você.",
+      description: "Moderna, completa e pronta para receber você.",
       imageUrl: "/headquarter.webp",
       icon: <Building2 className="w-8 h-8" />,
     },

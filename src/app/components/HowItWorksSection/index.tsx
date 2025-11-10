@@ -106,24 +106,21 @@ export default function HowItWorksSection() {
     {
       icon: <Search className="w-6 h-6" />,
       title: "Simule Online",
-      description:
-        "Faça uma simulação em segundos, sem compromisso.",
+      description: "Faça uma simulação em segundos, sem compromisso.",
       imageUrl:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80",
     },
     {
       icon: <FileText className="w-6 h-6" />,
       title: "Envie seus Documentos",
-      description:
-        "Upload rápido e seguro direto pela plataforma.",
+      description: "Upload rápido e seguro direto pela plataforma.",
       imageUrl:
         "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=400&q=80",
     },
     {
       icon: <CheckCircle className="w-6 h-6" />,
       title: "Análise Rápida",
-      description:
-        "Encontramos a melhor oferta de acordo com seu perfil.",
+      description: "Encontramos a melhor oferta de acordo com seu perfil.",
       imageUrl:
         "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
     },
