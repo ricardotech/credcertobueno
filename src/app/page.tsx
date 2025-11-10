@@ -2,6 +2,7 @@ import GlobalHeader from "./components/Header";
 import HomeHeroSection from "./components/HomeHeroSection";
 import StatisticsSection from "./components/StatisticsSection";
 import AboutSection from "./components/AboutSection";
+import LocationsSection from "./components/LocationsSection";
 import ServicesSection from "./components/ServicesSection";
 import DifferentialsSection from "./components/DifferentialsSection";
 import HowItWorksSection from "./components/HowItWorksSection";
@@ -23,6 +24,7 @@ export default function MainPage() {
       <DifferentialsSection />
       <HowItWorksSection />
       <UseCasesSection />
+      <LocationsSection />
       <TestimonialsSection />
       <PartnersSection />
       <FAQSection />
