@@ -38,7 +38,7 @@ function StepCard({
           delay: index * 0.2,
           ease: [0.25, 0.1, 0.25, 1],
         }}
-        className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+        className="flex flex-row lg:flex-row items-start gap-4 lg:gap-8"
       >
         {/* Number Badge */}
         <motion.div
@@ -55,7 +55,7 @@ function StepCard({
         </motion.div>
 
         {/* Content */}
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex-1 text-left">
           {/* <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -76,7 +76,7 @@ function StepCard({
               delay: index * 0.2 + 0.5,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="text-2xl lg:text-3xl font-semibold text-[#1C4200] mb-3"
+            className="text-2xl lg:text-3xl font-semibold text-[#1C4200] mb-1"
           >
             {title}
           </motion.h3>
@@ -88,7 +88,7 @@ function StepCard({
               delay: index * 0.2 + 0.6,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="text-[#1C4200]/70 text-lg leading-relaxed"
+            className="text-[#1C4200]/70 text-base leading-relaxed"
           >
             {description}
           </motion.p>
