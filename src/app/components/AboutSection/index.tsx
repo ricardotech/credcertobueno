@@ -81,7 +81,7 @@ export default function AboutSection() {
             className="relative h-[400px] lg:h-[600px] overflow-hidden"
           >
             <Image
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+              src="/feliz.jpg"
               alt="Equipe CredCertoBueno"
               fill
               className="object-cover"

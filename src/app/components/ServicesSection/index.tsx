@@ -155,7 +155,7 @@ export default function ServicesSection() {
             }}
             className="text-5xl lg:text-7xl font-semibold text-[#1C4200] mb-6"
           >
-            Nossos Serviços de Crédito
+            Nossos Serviços
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -151,7 +151,7 @@ export default function DifferentialsSection() {
             }}
             className="text-xl lg:text-2xl text-[#1C4200]/70 max-w-3xl mx-auto"
           >
-            Benefícios que fazem diferença no seu bolso
+            Benefícios que fazem a diferença
           </motion.p>
         </div>
 

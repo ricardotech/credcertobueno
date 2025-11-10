@@ -136,7 +136,7 @@ export default function UseCasesSection() {
             }}
             className="text-4xl lg:text-6xl font-semibold text-white mb-6"
           >
-            O Crédito Certo para Cada Momento da Sua Vida
+            Dinheiro para todos os momentos da Sua Vida
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
