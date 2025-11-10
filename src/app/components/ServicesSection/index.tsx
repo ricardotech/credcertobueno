@@ -26,16 +26,15 @@ function ServiceCard({
   imageUrl,
 }: ServiceCardProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{
-        duration: 0.6,
-        delay: index * 0.2,
+        duration: 0.5,
         ease: [0.25, 0.1, 0.25, 1],
       }}
       className="group relative bg-white p-0 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#8FDB00]/30 flex flex-col h-full"
@@ -43,18 +42,7 @@ function ServiceCard({
       {/* Decorative gradient border on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#8FDB00]/0 to-[#8FDB00]/0 group-hover:from-[#8FDB00]/5 group-hover:to-[#1C4200]/5 transition-all duration-300 -z-10"></div>
 
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={
-          isInView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }
-        }
-        transition={{
-          duration: 0.5,
-          delay: index * 0.2 + 0.2,
-          ease: [0.25, 0.1, 0.25, 1],
-        }}
-        className="relative w-full h-64 mb-6 overflow-hidden"
-      >
+      <div className="relative w-full h-64 mb-6 overflow-hidden">
         <Image
           src={imageUrl}
           alt={title}
@@ -62,45 +50,17 @@ function ServiceCard({
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-      </motion.div>
+      </div>
 
       {/* Content */}
       <div className="flex-1 flex flex-col px-8 pb-8">
-        <motion.h3
-          initial={{ opacity: 0, x: -20 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-          transition={{
-            duration: 0.5,
-            delay: index * 0.2 + 0.3,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
-          className="text-2xl font-semibold text-[#1C4200] mb-4"
-        >
-          {title}
-        </motion.h3>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{
-            duration: 0.5,
-            delay: index * 0.2 + 0.4,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
-          className="text-[#1C4200]/70 text-base leading-relaxed mb-6 flex-1"
-        >
+        <h3 className="text-2xl font-semibold text-[#1C4200] mb-4">{title}</h3>
+        <p className="text-[#1C4200]/70 text-base leading-relaxed mb-6 flex-1">
           {description}
-        </motion.p>
+        </p>
 
         {hasLink && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.2 + 0.5,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-          >
+          <div>
             <Button className="w-full justify-center bg-[#8FDB00] hover:bg-[#7BC700] text-black font-semibold transition-all duration-300">
               Saiba mais
               <svg
@@ -117,7 +77,7 @@ function ServiceCard({
                 />
               </svg>
             </Button>
-          </motion.div>
+          </div>
         )}
       </div>
     </motion.div>
