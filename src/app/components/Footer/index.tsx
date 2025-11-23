@@ -147,28 +147,28 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+551140004000"
+                  href="tel:+556231770030"
                   className="flex items-start gap-3 text-white/80 hover:text-[#8FDB00] transition-colors duration-200 text-sm group"
                 >
                   <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:text-[#8FDB00]" />
-                  <span>(11) 4000-4000</span>
+                  <span>(62) 3177-0030</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/5511999999999"
+                  href="https://wa.me/556231770030"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-white/80 hover:text-[#8FDB00] transition-colors duration-200 text-sm group"
                 >
                   <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:text-[#8FDB00]" />
-                  <span>WhatsApp: (11) 99999-9999</span>
+                  <span>WhatsApp: (62) 3177-0030</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-white/80 text-sm">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <span>São Paulo, SP - Brasil</span>
+                  <span>Av. Cachoeira Dourada, 20 – Qd 13 Lt 07<br />Vila São Joaquim, Anápolis – GO, 75145-040</span>
                 </div>
               </li>
             </ul>

@@ -120,11 +120,11 @@ export default function INSSPage() {
                 <div className="flex flex-col gap-4">
                   <Button className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-xl py-8 rounded-xl shadow-lg hover:scale-105 transition-all">
                     <MessageCircle className="w-6 h-6 mr-3" />
-                    WhatsApp: (11) 99999-9999
+                    WhatsApp: (62) 3177-0030
                   </Button>
                   <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-xl py-8 rounded-xl shadow-lg hover:scale-105 transition-all">
                     <Phone className="w-6 h-6 mr-3" />
-                    Ligar: 0800 123 4567
+                    Ligar: (62) 3177-0030
                   </Button>
                 </div>
               </div>
@@ -298,16 +298,19 @@ export default function INSSPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
             <Button className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-2xl py-10 rounded-2xl shadow-xl hover:scale-105 transition-all">
               <MessageCircle className="w-7 h-7 mr-3" />
-              WhatsApp
+              (62) 3177-0030
             </Button>
             <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-2xl py-10 rounded-2xl shadow-xl hover:scale-105 transition-all">
               <Phone className="w-7 h-7 mr-3" />
-              Ligar Agora
+              (62) 3177-0030
             </Button>
           </div>
 
-          <p className="text-white/70 text-xl">
+          <p className="text-white/70 text-xl mb-2">
             Atendimento de segunda a sexta, das 8h às 18h
+          </p>
+          <p className="text-white/60 text-lg">
+            📍 Av. Cachoeira Dourada, 20 – Vila São Joaquim, Anápolis – GO
           </p>
         </div>
       </section>
