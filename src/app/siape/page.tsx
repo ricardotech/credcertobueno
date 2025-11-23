@@ -2,6 +2,7 @@
 
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
+import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -162,6 +163,18 @@ export default function SIAPEPage() {
           </div>
         </div>
       </section>
+
+      <CreditSimulatorSection
+        title="Simule seu consignado para servidor público"
+        subtitle="Compare parcelas para SIAPE, servidores estaduais e municipais com condições especiais."
+        productOptions={[
+          { value: "siape", label: "SIAPE - Servidor Federal", rate: 1.45 },
+          { value: "governo", label: "Servidor Estadual", rate: 1.55 },
+          { value: "municipal", label: "Servidor Municipal", rate: 1.6 },
+        ]}
+        defaultProductType="siape"
+        ctaLabel="Quero simular meu consignado"
+      />
 
       {/* Categories Section */}
       <section className="relative w-full py-20 bg-[#F9FAFB]">

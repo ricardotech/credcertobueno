@@ -2,6 +2,7 @@
 
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
+import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -178,6 +179,14 @@ export default function ServidorMunicipalPage() {
           </div>
         </div>
       </section>
+
+      <CreditSimulatorSection
+        title="Simule seu consignado para servidor municipal"
+        subtitle="Descubra a parcela que cabe no seu orçamento com condições especiais para prefeituras parceiras."
+        productOptions={[{ value: "municipal", label: "Servidor Municipal", rate: 1.6 }]}
+        defaultProductType="municipal"
+        ctaLabel="Simular agora"
+      />
 
       {/* Benefits */}
       <section className="relative w-full py-20 bg-[#F9FAFB]">
