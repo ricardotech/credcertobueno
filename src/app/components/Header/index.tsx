@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { ChevronDown } from "lucide-react";
@@ -22,7 +23,14 @@ export default function GlobalHeader() {
     <>
       <header className="w-full h-[70px] bg-[#FFF] flex items-center justify-between fixed z-50 shadow-sm">
         <div className="w-full flex mx-auto max-w-7xl justify-between items-center px-4 xl:px-0">
-          <div className="flex items-center">
+          <Link
+            href="/"
+            onClick={() => {
+              setIsMenuOpen(false);
+              setIsProductsOpen(false);
+            }}
+            className="flex items-center"
+          >
             <Image
               src="/icon.png"
               alt="CredCertoBueno icon"
@@ -31,7 +39,7 @@ export default function GlobalHeader() {
               className="mr-2"
             />
             <p className="text-xl text-black font-bold">CredCertoBueno</p>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-6">
