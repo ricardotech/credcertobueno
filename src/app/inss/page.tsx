@@ -352,7 +352,7 @@ export default function INSSPage() {
             Atendimento de segunda a sexta, das 8h às 18h
           </p>
           <p className="text-white/60 text-lg">
-            📍 Av. Cachoeira Dourada, 20 – Vila São Joaquim, Anápolis – GO
+            Atendimento presencial em Anápolis – GO
           </p>
         </div>
       </section>

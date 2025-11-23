@@ -390,11 +390,8 @@ export default function ServidorMunicipalPage() {
             </Button>
           </div>
 
-          <p className="text-white/70 text-lg mb-2">
-            📍 Av. Cachoeira Dourada, 20 – Qd 13 Lt 07
-          </p>
           <p className="text-white/70 text-lg">
-            Vila São Joaquim, Anápolis – GO, 75145-040
+            Atendimento presencial em Anápolis – GO
           </p>
         </div>
       </section>
