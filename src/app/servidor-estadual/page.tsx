@@ -308,7 +308,7 @@ export default function ServidorEstadualPage() {
           </div>
 
           <p className="text-white/70 text-lg">
-            📍 Av. Cachoeira Dourada, 20 – Anápolis – GO
+            Atendimento presencial em Anápolis – GO
           </p>
         </div>
       </section>

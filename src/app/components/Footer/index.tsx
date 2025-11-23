@@ -168,7 +168,7 @@ export default function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-white/80 text-sm">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <span>Av. Cachoeira Dourada, 20 – Qd 13 Lt 07<br />Vila São Joaquim, Anápolis – GO, 75145-040</span>
+                  <span>Atendimento presencial em Anápolis – GO</span>
                 </div>
               </li>
             </ul>
