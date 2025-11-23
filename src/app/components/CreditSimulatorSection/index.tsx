@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calculator, TrendingDown, Clock, CheckCircle2 } from "lucide-react";
 
@@ -34,9 +33,6 @@ export default function CreditSimulatorSection({
   defaultProductType,
   ctaLabel = "Solicitar Agora",
 }: CreditSimulatorSectionProps) {
-  const headerRef = useRef(null);
-  const isHeaderInView = useInView(headerRef, { once: true, margin: "-50px" });
-
   const [amount, setAmount] = useState(10000);
   const [installments, setInstallments] = useState(24);
 
@@ -101,64 +97,18 @@ export default function CreditSimulatorSection({
     >
       <div className="relative w-full max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div ref={headerRef} className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={
-              isHeaderInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-            }
-            transition={{
-              duration: 0.6,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-            className="inline-flex items-center gap-2 bg-[#8FDB00]/20 text-[#8FDB00] px-6 py-3 rounded-full mb-6"
-          >
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-[#8FDB00]/20 text-[#8FDB00] px-6 py-3 rounded-full mb-6">
             <Calculator className="w-5 h-5" />
             <span className="font-semibold">Simulador de Crédito</span>
-          </motion.div>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={
-              isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-            }
-            transition={{
-              duration: 0.7,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-            className="text-4xl lg:text-6xl font-semibold text-white mb-6"
-          >
-            {title}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={
-              isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-            }
-            transition={{
-              duration: 0.7,
-              delay: 0.2,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-            className="text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto"
-          >
-            {subtitle}
-          </motion.p>
+          <h2 className="text-4xl lg:text-6xl font-semibold text-white mb-6">{title}</h2>
+          <p className="text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto">{subtitle}</p>
         </div>
 
         {/* Simulator Container */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={
-            isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
-          }
-          transition={{
-            duration: 0.8,
-            delay: 0.3,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Side - Form */}
           <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-2xl">
             <div className="space-y-6">
@@ -234,9 +184,7 @@ export default function CreditSimulatorSection({
                   className="w-full accent-[#8FDB00]"
                 />
                 <div className="text-center mt-2">
-                  <span className="text-2xl font-bold text-[#1C4200]">
-                    {installments}x
-                  </span>
+                  <span className="text-2xl font-bold text-[#1C4200]">{installments}x</span>
                 </div>
               </div>
 
@@ -260,44 +208,43 @@ export default function CreditSimulatorSection({
             </div>
           </div>
 
-          {/* Right Side - Results */}
-          <div className="flex flex-col justify-center">
-            <div className="bg-white/10 backdrop-blur-sm border-2 border-white/20 p-8 lg:p-10 rounded-2xl">
-              <div className="text-center mb-8">
-                <p className="text-white/80 text-lg mb-2">Valor da parcela</p>
-                <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
+          {/* Right Side - Summary */}
+          <div className="bg-white/10 p-8 lg:p-10 rounded-2xl border border-white/20 text-white">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white/5 p-4 rounded-xl border border-white/10">
+                <div className="flex items-center gap-3">
+                  <TrendingDown className="w-10 h-10 text-[#8FDB00]" />
+                  <div>
+                    <p className="text-sm text-white/70">Taxa de Juros</p>
+                    <p className="text-2xl font-bold text-white">{currentRate}% a.m.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/5 p-4 rounded-xl border border-white/10">
+                <div className="flex items-center gap-3">
+                  <Clock className="w-10 h-10 text-[#8FDB00]" />
+                  <div>
+                    <p className="text-sm text-white/70">Parcelas</p>
+                    <p className="text-2xl font-bold text-white">{installments} meses</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/5 p-4 rounded-xl border border-white/10 sm:col-span-2">
+                <p className="text-sm text-white/70">Parcela estimada</p>
+                <p className="text-4xl lg:text-5xl font-bold text-[#8FDB00]">
                   R$ {calculateInstallment()}
-                </div>
-                <p className="text-white/60 text-sm">em {installments} parcelas</p>
+                </p>
+                <p className="text-sm text-white/60 mt-2">Simulação com base na taxa média do mercado</p>
               </div>
-
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-white/10 p-4 rounded-xl">
-                  <div className="flex items-center gap-2 text-[#8FDB00] mb-2">
-                    <TrendingDown className="w-4 h-4" />
-                    <span className="text-xs font-semibold">Taxa</span>
-                  </div>
-                  <p className="text-white text-xl font-bold">{currentRate}% a.m.</p>
-                </div>
-                <div className="bg-white/10 p-4 rounded-xl">
-                  <div className="flex items-center gap-2 text-[#8FDB00] mb-2">
-                    <Clock className="w-4 h-4" />
-                    <span className="text-xs font-semibold">Prazo</span>
-                  </div>
-                  <p className="text-white text-xl font-bold">{installments} meses</p>
-                </div>
-              </div>
-
-              <Button className="w-full bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                {ctaLabel}
-              </Button>
-
-              <p className="text-white/60 text-xs text-center mt-4">
-                * Valores e taxas sujeitos a análise de crédito
-              </p>
             </div>
+
+            <Button className="w-full bg-[#8FDB00] hover:bg-[#8FDB00]/90 text-[#1C4200] text-lg py-6 rounded-xl shadow-lg shadow-[#1C4200]/20">
+              {ctaLabel}
+            </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
