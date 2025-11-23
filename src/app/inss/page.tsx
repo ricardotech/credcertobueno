@@ -14,8 +14,8 @@ import {
   Clock,
   ThumbsUp,
   Star,
-  ArrowRight,
   Users,
+  TrendingDown,
 } from "lucide-react";
 
 export default function INSSPage() {
@@ -267,7 +267,7 @@ export default function INSSPage() {
                   ))}
                 </div>
                 <p className="text-xl text-[#1C4200]/80 mb-6 leading-relaxed italic">
-                  "{testimonial.text}"
+                  &ldquo;{testimonial.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 bg-[#8FDB00]/20 rounded-full flex items-center justify-center">

@@ -9,8 +9,6 @@ import {
   CheckCircle2,
   Zap,
   Shield,
-  Clock,
-  Smartphone,
   Calculator,
   TrendingDown,
   ArrowRight,
