@@ -70,22 +70,24 @@ export default function KPIsSection() {
 
   const kpis = [
     {
-      value: "+200mil",
-      label: "clientes satisfeitos",
+      prefix: "R$",
+      value: "10Mi",
+      label: "em empréstimos aprovados",
     },
     {
-      value: "+20",
-      label: "colaboradores",
+      prefix: "",
+      value: "18",
+      label: "anos de experiência",
+    },
+    {
+      prefix: "",
+      value: "+200mil",
+      label: "clientes satisfeitos",
     },
     {
       prefix: "",
       value: "4.9",
       label: "de avaliação no Google",
-    },
-    {
-      prefix: "",
-      value: "15",
-      label: "anos facilitando crédito",
     },
   ];
 

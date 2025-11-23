@@ -90,52 +90,68 @@ export default function ServicesSection() {
 
   const services = [
     {
-      title: "Empréstimo com Garantia de Veículo",
-      description:
-        "Use seu carro como garantia e tenha acesso a crédito de até R$ 150 mil, com parcelas acessíveis e taxas reduzidas.",
-      hasLink: true,
-      imageUrl:
-        "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
-    },
-    {
-      title: "Empréstimo com Garantia de Imóvel",
-      description:
-        "Seu imóvel pode liberar até R$ 3 milhões com as menores taxas do mercado e prazos flexíveis.",
-      hasLink: true,
-      imageUrl:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-    },
-    {
-      title: "Empréstimo Consignado Privado",
-      description:
-        "Crédito exclusivo para funcionários CLT de empresas privadas com desconto direto em folha e juros mais baixos.",
-      hasLink: true,
-      imageUrl:
-        "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80",
-    },
-    {
-      title: "Antecipação do FGTS",
-      description:
-        "Antecipe o saque futuro do FGTS com condições especiais e use o valor para quitar dívidas, realizar projetos ou investir.",
-      hasLink: true,
-      imageUrl:
-        "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
-    },
-    {
       title: "Crédito Consignado INSS",
       description:
-        "INSS, aposentados e pensionistas têm acesso a crédito com as melhores taxas e aprovação facilitada.",
+        "Aposentados e pensionistas do INSS têm acesso a crédito consignado com as melhores taxas e aprovação facilitada. Desconto direto no benefício.",
       hasLink: true,
       imageUrl:
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
     },
     {
-      title: "Consignado para CLT",
+      title: "Crédito Consignado SIAPE - Servidor Público Federal",
       description:
-        "Trabalhadores com carteira assinada podem contratar crédito consignado com juros menores que empréstimos padrão.",
+        "Crédito consignado exclusivo para servidores públicos federais com desconto em folha e as menores taxas do mercado.",
+      hasLink: true,
+      imageUrl:
+        "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80",
+    },
+    {
+      title: "Crédito Consignado CLT e FGTS",
+      description:
+        "Trabalhadores CLT podem contratar crédito consignado com desconto direto em folha ou antecipação do FGTS com condições especiais.",
       hasLink: true,
       imageUrl:
         "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+    },
+    {
+      title: "Crédito Consignado Governo",
+      description:
+        "Servidores públicos estaduais têm acesso a crédito consignado com taxas diferenciadas e aprovação rápida.",
+      hasLink: true,
+      imageUrl:
+        "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
+    },
+    {
+      title: "Crédito Consignado Municipal",
+      description:
+        "Crédito consignado para servidores públicos municipais com desconto em folha de pagamento e juros competitivos.",
+      hasLink: true,
+      imageUrl:
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+    },
+    {
+      title: "Financiamento de Imóveis",
+      description:
+        "Financie seu imóvel com as melhores condições do mercado. Prazos flexíveis de até 35 anos e taxas competitivas.",
+      hasLink: true,
+      imageUrl:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    },
+    {
+      title: "Financiamento de Carros",
+      description:
+        "Realize o sonho do carro próprio com financiamento facilitado. Aprove seu crédito rapidamente com taxas atrativas.",
+      hasLink: true,
+      imageUrl:
+        "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
+    },
+    {
+      title: "Empréstimo com Garantia de Carros e Imóveis",
+      description:
+        "Use seu carro ou imóvel como garantia e tenha acesso a crédito de até R$ 3 milhões com as menores taxas e parcelas acessíveis.",
+      hasLink: true,
+      imageUrl:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
     },
   ];
 
