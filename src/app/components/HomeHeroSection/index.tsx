@@ -30,30 +30,30 @@ export default function HomeHeroSection() {
   const heroSlides: HeroSlide[] = [
     {
       id: 1,
-      title: "Realize seus sonhos com crédito inteligente",
+      title: "Empréstimo Consignado & Financiamento",
       subtitle:
-        "Soluções completas em crédito consignado com as melhores taxas do mercado. Rápido, seguro e sem burocracia.",
+        "Crédito Consignado para INSS, Servidor Público (Municipal, Governo e Federal), CLT e FGTS. As melhores taxas do mercado.",
       image: "/hero-section-1.jpg",
       ctaText: "Simule seu crédito agora",
       ctaLink: "#simulacao",
       highlights: [
-        "+25 mil aprovados",
-        "Taxas a partir de 1,2% a.m.",
+        "10 milhões aprovados",
+        "18 anos de experiência",
         "100% online",
       ],
     },
     {
       id: 2,
-      title: "Empréstimo descomplicado para você",
+      title: "Cartão de Crédito Consignado RMC & RCC",
       subtitle:
-        "Do INSS ao CLT, do FGTS ao empréstimo com garantia. Encontre a solução perfeita para suas necessidades.",
+        "Crédito consignado exclusivo para aposentados e servidores públicos federais. Parcelas descontadas direto do benefício.",
       image: "/hero-section-2.jpg",
       ctaText: "Fale com especialista",
       ctaLink: "#contato",
       highlights: [
-        "Aprovação em 24h",
-        "Parceiros confiáveis",
-        "Atendimento especializado",
+        "Aprovação facilitada",
+        "Taxas competitivas",
+        "Sem consulta ao SPC/Serasa",
       ],
     },
   ];

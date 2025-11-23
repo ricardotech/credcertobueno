@@ -1,10 +1,12 @@
 import GlobalHeader from "./components/Header";
 import HomeHeroSection from "./components/HomeHeroSection";
+import CreditSimulatorSection from "./components/CreditSimulatorSection";
 import StatisticsSection from "./components/StatisticsSection";
 import AboutSection from "./components/AboutSection";
 import LocationsSection from "./components/LocationsSection";
 import LocationMapSection from "./components/LocationMapSection";
 import ServicesSection from "./components/ServicesSection";
+import ConsignedCardSection from "./components/ConsignedCardSection";
 import DifferentialsSection from "./components/DifferentialsSection";
 import HowItWorksSection from "./components/HowItWorksSection";
 import UseCasesSection from "./components/UseCasesSection";
@@ -19,9 +21,11 @@ export default function MainPage() {
     <main>
       <GlobalHeader />
       <HomeHeroSection />
+      <CreditSimulatorSection />
       <StatisticsSection />
       <AboutSection />
       <ServicesSection />
+      <ConsignedCardSection />
       <DifferentialsSection />
       <HowItWorksSection />
       <UseCasesSection />

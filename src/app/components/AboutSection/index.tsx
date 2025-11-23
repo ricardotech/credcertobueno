@@ -104,7 +104,7 @@ export default function AboutSection() {
               className="border-l-4 border-[#8FDB00] pl-6 mb-8"
             >
               <h2 className="text-4xl lg:text-6xl font-semibold text-[#1C4200] mb-6">
-                Transformamos crédito em oportunidade
+                Crédito Consignado Especializado
               </h2>
             </motion.div>
 
@@ -120,8 +120,10 @@ export default function AboutSection() {
               }}
               className="text-lg lg:text-xl text-[#1C4200]/70 leading-relaxed mb-8"
             >
-              Nossa equipe trabalha para oferecer soluções financeiras seguras,
-              com transparência e excelência no atendimento.
+              Somos especialistas em crédito consignado para aposentados do INSS,
+              servidores públicos federais (SIAPE), estaduais e municipais, além de
+              trabalhadores CLT. Oferecemos as melhores taxas e condições do mercado
+              com total transparência e atendimento personalizado.
             </motion.p>
 
             <div className="space-y-4">
