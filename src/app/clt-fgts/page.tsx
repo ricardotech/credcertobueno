@@ -2,6 +2,7 @@
 
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
+import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -104,6 +105,16 @@ export default function CLTFGTSPage() {
           </div>
         </div>
       </section>
+
+      <CreditSimulatorSection
+        title="Simule seu crédito consignado CLT ou FGTS"
+        subtitle="Calcule a parcela ideal para desconto em folha ou antecipação do FGTS."
+        productOptions={[
+          { value: "clt", label: "Desconto em folha CLT", rate: 1.75 },
+          { value: "fgts", label: "Antecipação do FGTS", rate: 1.85 },
+        ]}
+        defaultProductType="clt"
+      />
 
       {/* Empréstimo Consignado CLT */}
       <section className="relative w-full py-16 lg:py-24 bg-white">

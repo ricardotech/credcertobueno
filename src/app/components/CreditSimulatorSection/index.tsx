@@ -1,42 +1,98 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calculator, TrendingDown, Clock, CheckCircle2 } from "lucide-react";
 
-export default function CreditSimulatorSection() {
+type ProductOption = {
+  value: string;
+  label: string;
+  rate?: number;
+};
+
+type CreditSimulatorSectionProps = {
+  title?: string;
+  subtitle?: string;
+  productOptions?: ProductOption[];
+  defaultProductType?: string;
+  ctaLabel?: string;
+};
+
+const DEFAULT_PRODUCTS: Required<ProductOption>[] = [
+  { value: "inss", label: "INSS", rate: 1.65 },
+  { value: "siape", label: "SIAPE - Servidor Federal", rate: 1.45 },
+  { value: "clt", label: "CLT e FGTS", rate: 1.75 },
+  { value: "governo", label: "Servidor Estadual", rate: 1.55 },
+  { value: "municipal", label: "Servidor Municipal", rate: 1.6 },
+];
+
+export default function CreditSimulatorSection({
+  title = "Simule seu Crédito Consignado",
+  subtitle = "Descubra quanto você pode solicitar e qual será sua parcela",
+  productOptions,
+  defaultProductType,
+  ctaLabel = "Solicitar Agora",
+}: CreditSimulatorSectionProps) {
   const headerRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-50px" });
 
   const [amount, setAmount] = useState(10000);
   const [installments, setInstallments] = useState(24);
-  const [productType, setProductType] = useState("inss");
 
-  // Simulação de taxas (podem ser ajustadas conforme o produto)
-  const rates: { [key: string]: number } = {
-    inss: 1.65,
-    siape: 1.45,
-    clt: 1.75,
-    governo: 1.55,
-    municipal: 1.6,
-  };
+  const products = useMemo(() => {
+    if (!productOptions || productOptions.length === 0) {
+      return DEFAULT_PRODUCTS;
+    }
+
+    return productOptions.map((product) => ({
+      ...product,
+      rate:
+        product.rate ??
+        DEFAULT_PRODUCTS.find((defaultProduct) => defaultProduct.value === product.value)?.rate ??
+        1.65,
+    }));
+  }, [productOptions]);
+
+  const [productType, setProductType] = useState(() => {
+    const fallback = products[0]?.value ?? DEFAULT_PRODUCTS[0].value;
+
+    if (defaultProductType && products.some((product) => product.value === defaultProductType)) {
+      return defaultProductType;
+    }
+
+    return fallback;
+  });
+
+  useEffect(() => {
+    const fallback = products[0]?.value ?? DEFAULT_PRODUCTS[0].value;
+
+    if (defaultProductType && products.some((product) => product.value === defaultProductType)) {
+      setProductType(defaultProductType);
+      return;
+    }
+
+    if (!products.some((product) => product.value === productType)) {
+      setProductType(fallback);
+    }
+  }, [defaultProductType, productType, products]);
+
+  const rates = useMemo(() => {
+    return products.reduce<Record<string, number>>((map, product) => {
+      map[product.value] = product.rate ?? 0;
+      return map;
+    }, {});
+  }, [products]);
+
+  const currentRate = rates[productType] ?? products[0]?.rate ?? 0;
 
   const calculateInstallment = () => {
-    const rate = rates[productType] / 100;
+    const rate = currentRate / 100;
     const installmentValue =
       (amount * rate * Math.pow(1 + rate, installments)) /
       (Math.pow(1 + rate, installments) - 1);
     return installmentValue.toFixed(2);
   };
-
-  const products = [
-    { value: "inss", label: "INSS" },
-    { value: "siape", label: "SIAPE - Servidor Federal" },
-    { value: "clt", label: "CLT e FGTS" },
-    { value: "governo", label: "Servidor Estadual" },
-    { value: "municipal", label: "Servidor Municipal" },
-  ];
 
   return (
     <section
@@ -72,7 +128,7 @@ export default function CreditSimulatorSection() {
             }}
             className="text-4xl lg:text-6xl font-semibold text-white mb-6"
           >
-            Simule seu Crédito Consignado
+            {title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +142,7 @@ export default function CreditSimulatorSection() {
             }}
             className="text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto"
           >
-            Descubra quanto você pode solicitar e qual será sua parcela
+            {subtitle}
           </motion.p>
         </div>
 
@@ -189,9 +245,7 @@ export default function CreditSimulatorSection() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-[#1C4200]">
                     <CheckCircle2 className="w-5 h-5 text-[#8FDB00] flex-shrink-0" />
-                    <span className="text-sm">
-                      Taxa a partir de {rates[productType]}% a.m.
-                    </span>
+                    <span className="text-sm">Taxa a partir de {currentRate}% a.m.</span>
                   </div>
                   <div className="flex items-center gap-3 text-[#1C4200]">
                     <CheckCircle2 className="w-5 h-5 text-[#8FDB00] flex-shrink-0" />
@@ -223,23 +277,19 @@ export default function CreditSimulatorSection() {
                     <TrendingDown className="w-4 h-4" />
                     <span className="text-xs font-semibold">Taxa</span>
                   </div>
-                  <p className="text-white text-xl font-bold">
-                    {rates[productType]}% a.m.
-                  </p>
+                  <p className="text-white text-xl font-bold">{currentRate}% a.m.</p>
                 </div>
                 <div className="bg-white/10 p-4 rounded-xl">
                   <div className="flex items-center gap-2 text-[#8FDB00] mb-2">
                     <Clock className="w-4 h-4" />
                     <span className="text-xs font-semibold">Prazo</span>
                   </div>
-                  <p className="text-white text-xl font-bold">
-                    {installments} meses
-                  </p>
+                  <p className="text-white text-xl font-bold">{installments} meses</p>
                 </div>
               </div>
 
               <Button className="w-full bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                Solicitar Agora
+                {ctaLabel}
               </Button>
 
               <p className="text-white/60 text-xs text-center mt-4">

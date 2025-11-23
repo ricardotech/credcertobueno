@@ -2,6 +2,7 @@
 
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
+import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -153,6 +154,14 @@ export default function ServidorEstadualPage() {
           </div>
         </div>
       </section>
+
+      <CreditSimulatorSection
+        title="Simule seu consignado para servidor estadual"
+        subtitle="Calcule a parcela ideal com taxas diferenciadas para o seu estado."
+        productOptions={[{ value: "governo", label: "Servidor Estadual", rate: 1.55 }]}
+        defaultProductType="governo"
+        ctaLabel="Quero simular agora"
+      />
 
       {/* Benefits */}
       <section className="relative w-full py-20 bg-[#F9FAFB]">

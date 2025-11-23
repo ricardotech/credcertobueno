@@ -2,6 +2,7 @@
 
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
+import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -160,6 +161,14 @@ export default function INSSPage() {
           </div>
         </div>
       </section>
+
+      <CreditSimulatorSection
+        title="Simule seu crédito INSS"
+        subtitle="Veja quanto cabe no seu benefício com taxas especiais para aposentados e pensionistas."
+        productOptions={[{ value: "inss", label: "Benefício INSS", rate: 1.65 }]}
+        defaultProductType="inss"
+        ctaLabel="Quero simular agora"
+      />
 
       {/* Passo a Passo Ilustrado */}
       <section className="relative w-full py-24 bg-white">
