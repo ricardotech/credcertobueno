@@ -19,6 +19,11 @@ import {
 } from "lucide-react";
 
 export default function INSSPage() {
+  const whatsappNumber = "556293338331";
+  const callNumber = "+556233874759";
+  const whatsappMessage = encodeURIComponent(
+    "Olá! Gostaria de solicitar meu crédito consignado."
+  );
   const steps = [
     {
       number: 1,
@@ -118,13 +123,27 @@ export default function INSSPage() {
                   Fale com a gente agora!
                 </p>
                 <div className="flex flex-col gap-4">
-                  <Button className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-xl py-8 rounded-xl shadow-lg hover:scale-105 transition-all">
-                    <MessageCircle className="w-6 h-6 mr-3" />
-                    WhatsApp: (62) 3177-0030
+                  <Button
+                    asChild
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-xl py-8 rounded-xl shadow-lg hover:scale-105 transition-all"
+                  >
+                    <a
+                      href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <MessageCircle className="w-6 h-6 mr-3" />
+                      WhatsApp: (62) 93338-8331
+                    </a>
                   </Button>
-                  <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-xl py-8 rounded-xl shadow-lg hover:scale-105 transition-all">
-                    <Phone className="w-6 h-6 mr-3" />
-                    Ligar: (62) 3177-0030
+                  <Button
+                    asChild
+                    className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-xl py-8 rounded-xl shadow-lg hover:scale-105 transition-all"
+                  >
+                    <a href={`tel:${callNumber}`}>
+                      <Phone className="w-6 h-6 mr-3" />
+                      Ligar: (62) 3387-4759
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -296,13 +315,27 @@ export default function INSSPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
-            <Button className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-2xl py-10 rounded-2xl shadow-xl hover:scale-105 transition-all">
-              <MessageCircle className="w-7 h-7 mr-3" />
-              (62) 3177-0030
+            <Button
+              asChild
+              className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-2xl py-10 rounded-2xl shadow-xl hover:scale-105 transition-all"
+            >
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="w-7 h-7 mr-3" />
+                (62) 93338-8331
+              </a>
             </Button>
-            <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-2xl py-10 rounded-2xl shadow-xl hover:scale-105 transition-all">
-              <Phone className="w-7 h-7 mr-3" />
-              (62) 3177-0030
+            <Button
+              asChild
+              className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-2xl py-10 rounded-2xl shadow-xl hover:scale-105 transition-all"
+            >
+              <a href={`tel:${callNumber}`}>
+                <Phone className="w-7 h-7 mr-3" />
+                (62) 3387-4759
+              </a>
             </Button>
           </div>
 
