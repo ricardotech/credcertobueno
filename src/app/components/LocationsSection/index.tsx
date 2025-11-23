@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "@/lib/static-motion";
 import Image from "next/image";
 import { MapPin, Building2 } from "lucide-react";
 

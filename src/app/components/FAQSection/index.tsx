@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "@/lib/static-motion";
 import { Plus, Minus } from "lucide-react";
 
 interface FAQItemProps {

@@ -1,28 +1,20 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import Image from "next/image";
-import { Search, FileText, CheckCircle, Wallet } from "lucide-react";
+import { motion, useInView } from "@/lib/static-motion";
 
 interface StepCardProps {
   number: number;
-  icon: React.ReactNode;
   title: string;
   description: string;
-  imageUrl: string;
   index: number;
-  isLast?: boolean;
 }
 
 function StepCard({
   number,
-  icon,
   title,
   description,
-  imageUrl,
   index,
-  isLast = false,
 }: StepCardProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -104,33 +96,21 @@ export default function HowItWorksSection() {
 
   const steps = [
     {
-      icon: <Search className="w-6 h-6" />,
       title: "Simule Online",
       description: "Faça uma simulação em segundos, sem compromisso.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80",
     },
     {
-      icon: <FileText className="w-6 h-6" />,
       title: "Envie seus Documentos",
       description: "Upload rápido e seguro direto pela plataforma.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=400&q=80",
     },
     {
-      icon: <CheckCircle className="w-6 h-6" />,
       title: "Análise Rápida",
       description: "Encontramos a melhor oferta de acordo com seu perfil.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
     },
     {
-      icon: <Wallet className="w-6 h-6" />,
       title: "Receba o Crédito",
       description:
         "Após aprovação, o valor cai em sua conta em até 24 horas úteis.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=400&q=80",
     },
   ];
 

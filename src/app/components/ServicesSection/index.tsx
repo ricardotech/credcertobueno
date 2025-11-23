@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "@/lib/static-motion";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -14,7 +14,6 @@ interface ServiceCardProps {
   title: string;
   description: string;
   hasLink?: boolean;
-  index: number;
   imageUrl: string;
 }
 
@@ -22,7 +21,6 @@ function ServiceCard({
   title,
   description,
   hasLink = false,
-  index,
   imageUrl,
 }: ServiceCardProps) {
   const ref = useRef(null);
@@ -223,7 +221,6 @@ export default function ServicesSection() {
                   title={service.title}
                   description={service.description}
                   hasLink={service.hasLink}
-                  index={index}
                   imageUrl={service.imageUrl}
                 />
               </SwiperSlide>
