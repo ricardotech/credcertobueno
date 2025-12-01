@@ -17,6 +17,10 @@ export default function GlobalHeader() {
     { name: "CLT e FGTS", href: "/clt-fgts" },
     { name: "Servidor Estadual", href: "/servidor-estadual" },
     { name: "Servidor Municipal", href: "/servidor-municipal" },
+    {
+      name: "Seguro Financiamento Veicular",
+      href: "/seguro-financiamento-veicular",
+    },
   ];
 
   return (
