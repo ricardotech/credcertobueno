@@ -1,5 +1,6 @@
 import GlobalHeader from "../components/Header";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
+import LeadForm from "../components/LeadForm";
 import Footer from "../components/Footer";
 
 export default function SimuladorPage() {
@@ -96,6 +97,50 @@ export default function SimuladorPage() {
           </div>
         </div>
       </section>
+
+      {/* Lead Form Section */}
+      <section className="relative w-full py-16 lg:py-24 bg-gradient-to-br from-[#F9FAFB] to-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1C4200] mb-6">
+                Gostou da simulação?
+              </h2>
+              <p className="text-xl text-[#1C4200]/70 mb-8">
+                Preencha o formulário e nossa equipe entrará em contato via WhatsApp para formalizar sua solicitação com as melhores condições.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-[#8FDB00] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">✓</span>
+                  </div>
+                  <span className="text-[#1C4200]">Atendimento personalizado</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-[#8FDB00] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">✓</span>
+                  </div>
+                  <span className="text-[#1C4200]">Aprovação em até 24 horas</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-[#8FDB00] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">✓</span>
+                  </div>
+                  <span className="text-[#1C4200]">Processo 100% online</span>
+                </li>
+              </ul>
+            </div>
+            <LeadForm
+              landingPage="Simulador de Crédito Consignado"
+              title="Solicite seu crédito"
+              subtitle="Preencha seus dados e finalize sua solicitação"
+              buttonText="Enviar solicitação"
+              successMessage="Solicitação enviada! Em breve um consultor entrará em contato via WhatsApp para concluir o processo."
+            />
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

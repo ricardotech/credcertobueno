@@ -15,6 +15,7 @@ import PartnersSection from "./components/PartnersSection";
 import FAQSection from "./components/FAQSection";
 import CTAContactSection from "./components/CTAContactSection";
 import Footer from "./components/Footer";
+import LeadForm from "./components/LeadForm";
 
 export default function MainPage() {
   return (
@@ -35,6 +36,48 @@ export default function MainPage() {
       <PartnersSection />
       <FAQSection />
       <CTAContactSection />
+
+      {/* Lead Form Section */}
+      <section className="relative w-full py-16 lg:py-24 bg-gradient-to-br from-[#F9FAFB] to-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1C4200] mb-6">
+                Solicite seu crédito consignado agora
+              </h2>
+              <p className="text-xl text-[#1C4200]/70 mb-8">
+                Preencha o formulário e nossa equipe entrará em contato via WhatsApp para oferecer as melhores condições do mercado.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-[#8FDB00] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">✓</span>
+                  </div>
+                  <span className="text-[#1C4200]">Atendimento personalizado e rápido</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-[#8FDB00] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">✓</span>
+                  </div>
+                  <span className="text-[#1C4200]">As menores taxas do mercado</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-[#8FDB00] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">✓</span>
+                  </div>
+                  <span className="text-[#1C4200]">Aprovação em até 24 horas</span>
+                </li>
+              </ul>
+            </div>
+            <LeadForm
+              landingPage="Home - CredCertoBueno"
+              title="Fale conosco"
+              subtitle="Preencha seus dados e receba nossa proposta via WhatsApp"
+            />
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

@@ -3,6 +3,7 @@
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
+import LeadForm from "../components/LeadForm";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -393,6 +394,47 @@ export default function ServidorMunicipalPage() {
           <p className="text-white/70 text-lg">
             Atendimento presencial em Anápolis – GO
           </p>
+        </div>
+      </section>
+
+      {/* Lead Form Section */}
+      <section className="relative w-full py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1C4200] mb-6">
+                Crédito consignado para servidores municipais
+              </h2>
+              <p className="text-xl text-[#1C4200]/70 mb-8">
+                Taxas especiais e atendimento personalizado para cada prefeitura.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span className="text-[#1C4200]">Taxa a partir de 1,60% ao mês</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span className="text-[#1C4200]">Aprovação rápida em 24 horas</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span className="text-[#1C4200]">Parcelas de até 84 meses</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span className="text-[#1C4200]">Parcerias com prefeituras</span>
+                </li>
+              </ul>
+            </div>
+            <LeadForm
+              landingPage="Servidor Municipal - Crédito Consignado"
+              title="Solicite agora"
+              subtitle="Receba nossa proposta via WhatsApp"
+              buttonText="Quero falar com um consultor"
+              successMessage="Recebemos sua solicitação! Em breve um consultor entrará em contato via WhatsApp com as melhores condições para servidores municipais."
+            />
+          </div>
         </div>
       </section>
 

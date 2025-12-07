@@ -3,6 +3,7 @@
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
+import LeadForm from "../components/LeadForm";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -350,6 +351,51 @@ export default function SIAPEPage() {
             <p className="text-white/60 text-sm mt-6">
               Consulta gratuita e sem compromisso
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Form Section */}
+      <section className="relative w-full py-16 lg:py-24 bg-gradient-to-br from-[#F9FAFB] to-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <LeadForm
+              landingPage="SIAPE - Crédito Consignado para Servidores Federais"
+              title="Solicite seu crédito SIAPE"
+              subtitle="Preencha o formulário e receba as melhores condições via WhatsApp"
+              buttonText="Quero solicitar meu crédito"
+              successMessage="Recebemos sua solicitação! Em breve um consultor especializado entrará em contato via WhatsApp com as melhores condições para servidores federais."
+            />
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1C4200] mb-6">
+                As melhores taxas para servidores públicos
+              </h2>
+              <p className="text-xl text-[#1C4200]/70 mb-8">
+                Condições especiais para SIAPE, servidores estaduais e municipais.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                  <Building2 className="w-8 h-8 text-[#8FDB00] mb-3" />
+                  <h3 className="text-lg font-bold text-[#1C4200] mb-2">SIAPE Federal</h3>
+                  <p className="text-sm text-[#1C4200]/70">Taxa a partir de 1,45% a.m.</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                  <Landmark className="w-8 h-8 text-[#8FDB00] mb-3" />
+                  <h3 className="text-lg font-bold text-[#1C4200] mb-2">Servidores Estaduais</h3>
+                  <p className="text-sm text-[#1C4200]/70">Taxa a partir de 1,55% a.m.</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                  <Users className="w-8 h-8 text-[#8FDB00] mb-3" />
+                  <h3 className="text-lg font-bold text-[#1C4200] mb-2">Servidores Municipais</h3>
+                  <p className="text-sm text-[#1C4200]/70">Taxa a partir de 1,60% a.m.</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                  <Shield className="w-8 h-8 text-[#8FDB00] mb-3" />
+                  <h3 className="text-lg font-bold text-[#1C4200] mb-2">100% Seguro</h3>
+                  <p className="text-sm text-[#1C4200]/70">Processo transparente e confiável</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

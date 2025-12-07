@@ -2,6 +2,7 @@
 
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
+import LeadForm from "../components/LeadForm";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -352,6 +353,48 @@ export default function SeguroFinanciamentoVeicularPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1C4200]/50 to-transparent" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Form Section */}
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-white to-[#F9FAFB]">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1C4200] mb-6">
+                Recupere seu dinheiro agora
+              </h2>
+              <p className="text-xl text-[#1C4200]/70 mb-8">
+                Preencha o formulário e nossa equipe especializada analisará seu caso gratuitamente via WhatsApp.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span className="text-[#1C4200]">Análise gratuita do seu contrato</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span className="text-[#1C4200]">Estorno em dobro garantido pelo CDC</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span className="text-[#1C4200]">Indenização por danos morais</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span className="text-[#1C4200]">Atendimento humanizado e transparente</span>
+                </li>
+              </ul>
+            </div>
+            <LeadForm
+              landingPage="Seguro Financiamento Veicular - Ressarcimento"
+              title="Solicite análise gratuita"
+              subtitle="Envie seus dados e receba orientação via WhatsApp"
+              buttonText="Quero recuperar meu dinheiro"
+              successMessage="Solicitação recebida! Nossa equipe jurídica entrará em contato via WhatsApp para analisar seu caso e apresentar as possibilidades de ressarcimento."
+              showMessage={true}
+            />
           </div>
         </div>
       </section>

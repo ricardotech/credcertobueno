@@ -3,6 +3,7 @@
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
+import LeadForm from "../components/LeadForm";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -374,26 +375,43 @@ export default function CLTFGTSPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Lead Form Section */}
       <section className="relative w-full py-16 lg:py-24 bg-gradient-to-br from-[#1C4200] to-[#2d6800]">
-        <div className="max-w-5xl mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Pronto para solicitar seu crédito?
-          </h2>
-          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Junte-se a milhares de trabalhadores que já aproveitaram as melhores taxas do mercado
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-7 rounded-full shadow-xl hover:scale-105 transition-all">
-              Solicitar Agora
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-lg px-10 py-7 rounded-full"
-            >
-              Falar com Consultor
-            </Button>
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                Solicite seu crédito CLT ou FGTS agora
+              </h2>
+              <p className="text-xl text-white/90 mb-8">
+                Preencha o formulário e nossa equipe entrará em contato via WhatsApp para oferecer as melhores condições.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span>Taxa a partir de 1,75% ao mês</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span>Aprovação em até 24 horas</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span>100% online e sem burocracia</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#8FDB00] flex-shrink-0 mt-1" />
+                  <span>Sem consulta ao SPC/Serasa</span>
+                </li>
+              </ul>
+            </div>
+            <LeadForm
+              landingPage="CLT/FGTS - Crédito para Trabalhadores"
+              title="Solicite agora"
+              subtitle="Receba nossa proposta via WhatsApp"
+              buttonText="Quero solicitar meu crédito"
+              successMessage="Solicitação recebida! Em breve um de nossos consultores entrará em contato via WhatsApp para apresentar as melhores condições."
+            />
           </div>
         </div>
       </section>

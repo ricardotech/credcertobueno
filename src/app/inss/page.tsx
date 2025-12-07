@@ -3,6 +3,7 @@
 import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
+import LeadForm from "../components/LeadForm";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -308,6 +309,51 @@ export default function INSSPage() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Form Section */}
+      <section className="relative w-full py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <LeadForm
+              landingPage="INSS - Crédito Consignado para Aposentados"
+              title="Solicite seu crédito INSS"
+              subtitle="Preencha o formulário e receba atendimento via WhatsApp"
+              buttonText="Quero falar com um consultor"
+              successMessage="Recebemos sua solicitação! Em breve um consultor entrará em contato via WhatsApp com as melhores condições para aposentados."
+            />
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1C4200] mb-6">
+                Atendimento especializado para aposentados
+              </h2>
+              <p className="text-xl text-[#1C4200]/70 mb-8">
+                Nossa equipe é treinada para atender com atenção e cuidado, oferecendo as melhores taxas do mercado.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-gradient-to-br from-[#F9FAFB] to-white p-6 rounded-2xl border border-gray-100">
+                  <Heart className="w-8 h-8 text-[#8FDB00] mb-3" />
+                  <h3 className="text-lg font-bold text-[#1C4200] mb-2">Atendimento Humanizado</h3>
+                  <p className="text-sm text-[#1C4200]/70">Equipe treinada para atender com paciência e cuidado</p>
+                </div>
+                <div className="bg-gradient-to-br from-[#F9FAFB] to-white p-6 rounded-2xl border border-gray-100">
+                  <TrendingDown className="w-8 h-8 text-[#8FDB00] mb-3" />
+                  <h3 className="text-lg font-bold text-[#1C4200] mb-2">Melhores Taxas</h3>
+                  <p className="text-sm text-[#1C4200]/70">A partir de 1,65% ao mês para aposentados</p>
+                </div>
+                <div className="bg-gradient-to-br from-[#F9FAFB] to-white p-6 rounded-2xl border border-gray-100">
+                  <Clock className="w-8 h-8 text-[#8FDB00] mb-3" />
+                  <h3 className="text-lg font-bold text-[#1C4200] mb-2">Resposta Rápida</h3>
+                  <p className="text-sm text-[#1C4200]/70">Análise e aprovação em até 1 dia útil</p>
+                </div>
+                <div className="bg-gradient-to-br from-[#F9FAFB] to-white p-6 rounded-2xl border border-gray-100">
+                  <Shield className="w-8 h-8 text-[#8FDB00] mb-3" />
+                  <h3 className="text-lg font-bold text-[#1C4200] mb-2">Sem Consulta SPC</h3>
+                  <p className="text-sm text-[#1C4200]/70">Nome negativado não é problema</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
