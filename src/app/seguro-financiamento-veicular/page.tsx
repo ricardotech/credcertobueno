@@ -101,7 +101,7 @@ export default function SeguroFinanciamentoVeicularPage() {
 
   return (
     <main className="bg-gradient-to-b from-white via-[#F9FAFB] to-white">
-      <GlobalHeader />
+      <GlobalHeader showProducts={false} />
 
       <section className="relative w-full min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-[#F0F8EC] via-[#F8FFF0] to-[#E8F5E9] py-20">
         <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_20%,rgba(143,219,0,0.25),transparent_25%),radial-gradient(circle_at_80%_0,rgba(28,66,0,0.25),transparent_25%)]"></div>
@@ -172,8 +172,8 @@ export default function SeguroFinanciamentoVeicularPage() {
             >
               <div className="relative h-[520px] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=900&q=80"
-                  alt="Pessoa analisando contrato de financiamento de veículo"
+                  src="https://images.unsplash.com/photo-1547744036-0af353dfd060?w=900&q=80"
+                  alt="Carro popular brasileiro similar a um Onix ou HB20"
                   fill
                   className="object-cover"
                 />
@@ -345,8 +345,8 @@ export default function SeguroFinanciamentoVeicularPage() {
 
             <div className="relative h-[480px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=900&q=80"
-                alt="Pessoa recebendo orientação sobre estorno de seguro"
+                src="https://images.unsplash.com/photo-1547744036-0af353dfd060?w=900&q=80"
+                alt="Carro popular hatchback parecido com um Onix ou HB20"
                 fill
                 className="object-cover"
               />
