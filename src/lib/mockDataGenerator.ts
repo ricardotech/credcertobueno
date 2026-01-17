@@ -246,7 +246,7 @@ function gerarDataNascimento(idade: number): number {
 }
 
 // Gera contratos fictícios
-function gerarContratos(seed: number, margemDisponivel: number): ContratoData[] {
+function gerarContratos(seed: number): ContratoData[] {
   const numContratos = Math.floor(seededRandom(seed) * 5) + 2; // 2 a 6 contratos
   const contratos: ContratoData[] = [];
 
@@ -318,7 +318,7 @@ export function gerarDadosFicticios(cpf: string): MockResponse {
 
   const ddd = cidade.uf === "RJ" ? "21" : cidade.uf === "SP" ? "11" : cidade.uf === "GO" ? "62" : "31";
 
-  const contratos = gerarContratos(seed, margemLiberada);
+  const contratos = gerarContratos(seed);
 
   const bancoIndex = seed % bancos.length;
   const banco = bancos[bancoIndex];
