@@ -87,7 +87,13 @@ export default function GlobalHeader() {
               Simulador
             </a>
 
-            <Button className="bg-[#8FDB00] px-6 py-5 text-black font-semibold hover:bg-[#7BC700] transition-colors">
+            <Link href="/consulta-online">
+              <Button className="bg-gradient-to-r from-[#8FDB00] to-[#7BC700] px-6 py-5 text-black font-bold hover:from-[#7BC700] hover:to-[#6AA600] transition-all shadow-md hover:shadow-lg">
+                Consulta Online
+              </Button>
+            </Link>
+
+            <Button className="bg-white border-2 border-[#8FDB00] px-6 py-5 text-[#1C4200] font-semibold hover:bg-[#8FDB00]/10 transition-colors">
               Fale Conosco
             </Button>
           </div>
@@ -140,7 +146,13 @@ export default function GlobalHeader() {
                 Simulador
               </a>
 
-              <Button className="bg-[#8FDB00] w-full text-black font-semibold hover:bg-[#7BC700]">
+              <Link href="/consulta-online" onClick={() => setIsMenuOpen(false)}>
+                <Button className="bg-gradient-to-r from-[#8FDB00] to-[#7BC700] w-full text-black font-bold hover:from-[#7BC700] hover:to-[#6AA600]">
+                  Consulta Online
+                </Button>
+              </Link>
+
+              <Button className="bg-white border-2 border-[#8FDB00] w-full text-[#1C4200] font-semibold hover:bg-[#8FDB00]/10">
                 Fale Conosco
               </Button>
             </div>
