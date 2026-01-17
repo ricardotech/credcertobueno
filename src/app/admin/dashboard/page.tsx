@@ -27,16 +27,11 @@ import {
   Search,
   Upload,
   Users,
-  TrendingUp,
   DollarSign,
   FileText,
   Eye,
-  Download,
-  Filter,
-  RefreshCw,
   CheckCircle2,
   XCircle,
-  BarChart3,
 } from "lucide-react";
 import {
   gerarListaAdmin,
@@ -367,7 +362,7 @@ export default function AdminDashboardPage() {
                     </TableCell>
                   </TableRow>
                 ) : (
-                  filteredList.map((item, index) => (
+                  filteredList.map((item) => (
                     <TableRow key={item.id} className="hover:bg-[#F9FAFB]/50">
                       <TableCell className="font-mono text-sm">
                         {item.cpfFormatted}
