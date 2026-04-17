@@ -31,7 +31,7 @@ import { formatCPF } from "@/lib/cpf";
 import type { PromosysResponse } from "@/types/promosys";
 import { consultarClientePromosys } from "@/app/actions/promosys";
 
-function NotFoundView({ cpf, router }: { cpf: string | null; router: any }) {
+function NotFoundView({ cpf, router }: { cpf: string | null; router: ReturnType<typeof useRouter> }) {
   return (
     <main className="bg-gradient-to-b from-white via-[#F9FAFB] to-white min-h-screen">
       <GlobalHeader />
@@ -160,7 +160,7 @@ function ResultadoContent() {
       try {
         const response = await consultarClientePromosys(cpf as string);
         if (response.Code === "000" || response.Code === "100") {
-          setDados(response as any);
+          setDados(response as PromosysResponse);
         } else if (response.Code === "404") {
           setErrorType("not-found");
         } else {

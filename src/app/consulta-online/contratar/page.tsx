@@ -63,7 +63,7 @@ function ContratarContent() {
       try {
         const response = await consultarClientePromosys(cpf as string);
         if (response.Code === "000" || response.Code === "100") {
-          const dadosReais = response as any;
+          const dadosReais = response as PromosysResponse;
           setDados(dadosReais);
 
           const margemDisponivel = dadosReais?.Consulta?.BENEFICIO?.ValorLiberadoMargem || 0;

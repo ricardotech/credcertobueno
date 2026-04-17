@@ -134,11 +134,11 @@ export async function consultarClientePromosys(cpf: string) {
     }
 
     return dadosConsulta;
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Erro em consultarClientePromosys:", err);
     return {
       Code: "500",
-      Msg: err.message || "Ocorreu um erro ao processar a consulta API.",
+      Msg: err instanceof Error ? err.message : "Ocorreu um erro ao processar a consulta API.",
       Consulta: null,
     };
   }

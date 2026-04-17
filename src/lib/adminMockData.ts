@@ -1,4 +1,3 @@
-import { formatCPF } from "./cpf";
 import type { PromosysResponse } from "@/types/promosys";
 
 export const MOCK_CPFS = ["12345678909", "98765432100"];
@@ -39,7 +38,7 @@ export function gerarListaAdmin(): AdminCPFItem[] {
   ];
 }
 
-export function buscarDadosCompletoCPF(cpf: string): any {
+export function buscarDadosCompletoCPF(_cpf: string): PromosysResponse | null {
   return null;
 }
 
