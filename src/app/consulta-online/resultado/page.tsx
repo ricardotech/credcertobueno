@@ -23,19 +23,130 @@ import {
   ChevronUp,
   Home,
   ArrowRight,
+  ArrowLeft,
+  Car,
+  Wallet,
 } from "lucide-react";
-import {
-  gerarDadosFicticios,
-  formatCPF,
-  type MockResponse,
-} from "@/lib/mockDataGenerator";
+import { formatCPF } from "@/lib/cpf";
+import type { PromosysResponse } from "@/types/promosys";
+import { consultarClientePromosys } from "@/app/actions/promosys";
+
+function NotFoundView({ cpf, router }: { cpf: string | null; router: any }) {
+  return (
+    <main className="bg-gradient-to-b from-white via-[#F9FAFB] to-white min-h-screen">
+      <GlobalHeader />
+      <section className="relative w-full py-16">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-100 rounded-full mb-6">
+              <AlertCircle className="w-10 h-10 text-orange-500" />
+            </div>
+            <h1 className="text-4xl lg:text-5xl font-bold text-[#1C4200] mb-4">
+              Benefício Não Localizado
+            </h1>
+            <p className="text-xl text-[#1C4200]/70 max-w-2xl mx-auto">
+              Não encontramos margem livre ou convênio ativo para o CPF{" "}
+              <strong>{cpf ? formatCPF(cpf) : ""}</strong>.
+              <br />
+              <br />
+              Mas não se preocupe! Temos excelentes alternativas de crédito em outras modalidades para você.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-100 flex flex-col items-center text-center hover:border-[#8FDB00]/50 transition-colors">
+              <div className="w-16 h-16 bg-[#8FDB00]/10 rounded-full flex items-center justify-center mb-6">
+                <Car className="w-8 h-8 text-[#8FDB00]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1C4200] mb-3">
+                Garantia de Veículo
+              </h3>
+              <p className="text-[#1C4200]/70 mb-6 flex-1">
+                Use seu carro ou moto quitado como garantia e consiga crédito rápido com taxas super baixas.
+              </p>
+              <Button
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/5562999999999?text=Olá,%20tenho%20interesse%20no%20Empréstimo%20com%20Garantia%20de%20Veículo",
+                    "_blank"
+                  )
+                }
+                className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold"
+              >
+                <Phone className="w-4 h-4 mr-2" /> Falar no WhatsApp
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-100 flex flex-col items-center text-center hover:border-[#8FDB00]/50 transition-colors">
+              <div className="w-16 h-16 bg-[#8FDB00]/10 rounded-full flex items-center justify-center mb-6">
+                <Home className="w-8 h-8 text-[#8FDB00]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1C4200] mb-3">
+                Garantia de Imóvel
+              </h3>
+              <p className="text-[#1C4200]/70 mb-6 flex-1">
+                Seu imóvel vale muito! Utilize-o para alavancar um empréstimo maior e com longos prazos.
+              </p>
+              <Button
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/5562999999999?text=Olá,%20tenho%20interesse%20no%20Empréstimo%20com%20Garantia%20de%20Imóvel",
+                    "_blank"
+                  )
+                }
+                className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold"
+              >
+                <Phone className="w-4 h-4 mr-2" /> Falar no WhatsApp
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-100 flex flex-col items-center text-center hover:border-[#8FDB00]/50 transition-colors">
+              <div className="w-16 h-16 bg-[#8FDB00]/10 rounded-full flex items-center justify-center mb-6">
+                <Wallet className="w-8 h-8 text-[#8FDB00]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1C4200] mb-3">
+                Antecipação FGTS
+              </h3>
+              <p className="text-[#1C4200]/70 mb-6 flex-1">
+                Trabalha com carteira assinada ou tem saldo? Antecipe até 10 parcelas do seu Saque-Aniversário.
+              </p>
+              <Button
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/5562999999999?text=Olá,%20tenho%20interesse%20na%20Antecipação%20do%20FGTS",
+                    "_blank"
+                  )
+                }
+                className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold"
+              >
+                <Phone className="w-4 h-4 mr-2" /> Falar no WhatsApp
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <Button
+              onClick={() => router.push("/consulta-online")}
+              className="bg-white hover:bg-gray-50 text-[#1C4200] font-bold text-lg py-6 px-8 rounded-xl border-2 border-gray-200"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Fazer Nova Consulta
+            </Button>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </main>
+  );
+}
 
 function ResultadoContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [dados, setDados] = useState<MockResponse | null>(null);
+  const [dados, setDados] = useState<PromosysResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedContratos, setExpandedContratos] = useState(false);
+  const [errorType, setErrorType] = useState<"not-found" | null>(null);
 
   useEffect(() => {
     const cpf = searchParams.get("cpf");
@@ -45,12 +156,27 @@ function ResultadoContent() {
       return;
     }
 
-    // Simula loading
-    setTimeout(() => {
-      const dadosGerados = gerarDadosFicticios(cpf);
-      setDados(dadosGerados);
-      setLoading(false);
-    }, 1000);
+    async function buscar() {
+      try {
+        const response = await consultarClientePromosys(cpf as string);
+        if (response.Code === "000" || response.Code === "100") {
+          setDados(response as any);
+        } else if (response.Code === "404") {
+          setErrorType("not-found");
+        } else {
+          alert(response.Msg || "Não foi possível resgatar os dados do benefício.");
+          router.push("/consulta-online");
+        }
+      } catch (err) {
+        console.error("Erro na consulta API:", err);
+        alert("Erro processando a consulta. Tente novamente.");
+        router.push("/consulta-online");
+      } finally {
+        setLoading(false);
+      }
+    }
+    
+    buscar();
   }, [searchParams, router]);
 
   if (loading) {
@@ -70,6 +196,10 @@ function ResultadoContent() {
         </div>
       </main>
     );
+  }
+
+  if (errorType === "not-found") {
+    return <NotFoundView cpf={searchParams.get("cpf")} router={router} />;
   }
 
   if (!dados) {

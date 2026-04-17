@@ -195,11 +195,7 @@ export default function ServicesSection() {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={32}
             slidesPerView={1}
-            navigation={
-              typeof window !== "undefined" && window.innerWidth >= 1024
-                ? true
-                : false
-            }
+            navigation={true}
             pagination={{ clickable: true }}
             breakpoints={{
               640: {
@@ -256,6 +252,13 @@ export default function ServicesSection() {
           box-shadow: none;
           transition: all 0.3s ease;
           padding: 8px;
+        }
+
+        @media (max-width: 1023px) {
+          .swiper-button-next,
+          .swiper-button-prev {
+            display: none !important;
+          }
         }
 
         .swiper-button-next {

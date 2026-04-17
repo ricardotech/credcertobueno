@@ -39,7 +39,8 @@ import {
   buscarDadosCompletoCPF,
   type AdminCPFItem,
 } from "@/lib/adminMockData";
-import { formatCPF, type MockResponse } from "@/lib/mockDataGenerator";
+import { formatCPF } from "@/lib/cpf";
+import type { PromosysResponse } from "@/types/promosys";
 
 export default function AdminDashboardPage() {
   const router = useRouter();
@@ -48,7 +49,7 @@ export default function AdminDashboardPage() {
   const [filteredList, setFilteredList] = useState<AdminCPFItem[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterStatus, setFilterStatus] = useState<"todos" | "com-margem" | "sem-margem">("todos");
-  const [selectedCPF, setSelectedCPF] = useState<MockResponse | null>(null);
+  const [selectedCPF, setSelectedCPF] = useState<PromosysResponse | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [importDialogOpen, setImportDialogOpen] = useState(false);
   const [importText, setImportText] = useState("");

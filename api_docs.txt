@@ -1,0 +1,185 @@
+ 
+DOCUMENTAÇÃO API  
+ 
+ 
+ 
+ 
+Introdução  
+ 
+O sistema  Promosys  apresenta os seguintes métodos para integração :  
+Token,  Créditos , Benefícios , Solicita  Benef ício e Consulta; o s quais detalharemos adiante . 
+ Todas as requisiçõe s devem ocorrer via POST . 
+ 
+ 
+Autenticação  
+ 
+A autenticação em no ssa API se dá  por uma requisiçã o ao mé todo Token , sendo  necessá rio 
+o envio dos campos  usuário  e senha .  Exemplo:  
+ 
+  
+ 
+ 
+Códigos de erro  
+ 
+Todos os mé todos em nossa API retornam os campos Code e Msg.  Estes campos retornarão valores  
+em cas o de erro durante o acesso. Exemplo:  
+ 
+{  
+   "Code":"201",  
+   "Msg": "Usuário e/ou senha não informado ", 
+   "Token":""  
+} 
+ 
+Detalhando os Métodos  
+ 
+Método Token  
+ 
+URL: https://jcf.promosysweb.com/ services/token.php  
+ 
+Todos os mé todos em nossa API necessitam  de um  token gerado pelo mé todo acima.  
+ 
+Parâmetros:  
+ 
+usuario   tipo string ;  
+senha  tipo s tring ;  
+Retorno : 
+Arquivo json com um token ú nico  e validade no  dia. 
+ 
+Exemplo : 
+ 
+{  
+   "Code":"000",  
+   "Msg": "", 
+   "Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnQiOiJETk
+1QIiwidGltZXN0YW1wIjoxNTMxOTkxMTk1fQ.WUI09g3wrGHsdNXWwF
+DLouvmBxojnspGeRK4N2SB4o4"  
+} 
+ 
+ 
+ 
+Método Cr éditos  
+ 
+URL : https://jcf. promosysweb.com/services/creditos.php  
+ 
+ 
+Este método retorna os cré dito s disponíveis para consulta.  
+ 
+Parâ metros:  
+ 
+token  tipo string ;  
+ 
+Retorno:  
+ 
+Arquivo json com os cré dito s disponíveis . 
+  
+Exemplo : 
+ 
+{ 
+  "Code": "000",  
+  "Msg": "",  
+  "Creditos": "74",  
+  "CreditosOffline": "999"  
+} 
+ 
+Método Benef ícios  
+ 
+URL : https://jcf.promosysweb.com/services/beneficios.php  
+ 
+ 
+Este mét odo retorna o(s) Benefício(s) referente(s) ao  CPF informado.  
+ 
+Parâ metros:  
+ 
+token  tipo string;  
+ 
+cpf tipo string;  
+ 
+Retorno:  
+ 
+Arquivo json com o(s)  benefí cio(s)  do CPF . 
+  
+ 
+Exemplo : 
+ 
+{  
+   "Code":"000",  
+   "Msg":"",  
+   "Beneficios":[  
+      "1111111111 ", 
+      "2222222222 ", 
+      "3333333333 " 
+   ] 
+} 
+ 
+ 
+Método Solicita Benef ício Online  
+ 
+URL : https://jcf.promosysweb.com/services/solicitaBeneficio.php  
+ 
+ 
+Este mét odo solicita o Benefício  para processamento.  
+ 
+Parâ metros:  
+ 
+token  tipo string;  
+ 
+beneficio  tipo int;  
+ 
+Retorno:  
+ 
+Arquivo json com o status d a solicitação . 
+  
+ 
+Exemplo : 
+ { 
+  "Code": "100",  
+  "Msg": "Benef ício em Processamento"  
+} 
+ 
+ 
+Método Consulta  Online  
+ 
+URL:  https://jcf.promosysweb.com/ services/consulta.php  
+ 
+Este método retorna informaç ões baseadas no EXTRATO  referente s ao Benefício informado.   
+ 
+Parâ metros:  
+ 
+token  tipo string;  
+ 
+beneficio  tipo string;   
+ 
+Retorno:  
+ 
+Arquivo json com as informações referentes ao Benefício . 
+ 
+Exemplo : 
+ 
+Para est e método não passam os exemplos, caso necessário, d everá ser 
+solicitado.  
+ 
+ 
+Método Consulta  Offline  
+ 
+URL:  https://jcf.promosysweb.com/ services/consulta Offline .php 
+ 
+Este método retorna informaç ões baseadas no EXTRATO  referente s ao Benefício informado.   
+ 
+Parâ metros:  
+ 
+token  tipo string;  
+ 
+beneficio  tipo string;   
+ 
+Retorno:  
+ 
+Arquivo json com as informações referentes ao Benefício . 
+ 
+Exemplo : 
+ 
+Para est e método não passam os exemplos, caso necessário, d everá ser 
+solicitado.  
+ 
+ 
+Observaçã o: Todos os métodos aqui descritos, podem ser testados  e visualizados  através de 
+softwares de terc eiros, como por exemplo, o Postman  (teste) e o JsonViewer  (visualização).  

@@ -24,16 +24,14 @@ import {
   Award,
   Sparkles,
 } from "lucide-react";
-import {
-  gerarDadosFicticios,
-  formatCPF,
-  type MockResponse,
-} from "@/lib/mockDataGenerator";
+import { formatCPF } from "@/lib/cpf";
+import type { PromosysResponse } from "@/types/promosys";
+import { consultarClientePromosys } from "@/app/actions/promosys";
 
 function ContratarContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [dados, setDados] = useState<MockResponse | null>(null);
+  const [dados, setDados] = useState<PromosysResponse | null>(null);
   const [loading, setLoading] = useState(true);
 
   // Simulação de empréstimo
@@ -61,19 +59,30 @@ function ContratarContent() {
       return;
     }
 
-    setTimeout(() => {
-      const dadosGerados = gerarDadosFicticios(cpf);
-      setDados(dadosGerados);
+    async function buscar() {
+      try {
+        const response = await consultarClientePromosys(cpf as string);
+        if (response.Code === "000" || response.Code === "100") {
+          const dadosReais = response as any;
+          setDados(dadosReais);
 
-      // Define valor inicial como 50% da margem disponível
-      const margemDisponivel =
-        dadosGerados.Consulta.BENEFICIO.ValorLiberadoMargem;
-      if (margemDisponivel > 100) {
-        setValorDesejado(Math.floor(margemDisponivel * 0.5));
+          const margemDisponivel = dadosReais?.Consulta?.BENEFICIO?.ValorLiberadoMargem || 0;
+          if (margemDisponivel > 100) {
+            setValorDesejado(Math.floor(margemDisponivel * 0.5));
+          }
+        } else {
+          alert(response.Msg || "Não foi possível resgatar os dados do benefício.");
+          router.push("/consulta-online");
+        }
+      } catch (err) {
+        console.error("Erro na consulta API:", err);
+        router.push("/consulta-online");
+      } finally {
+        setLoading(false);
       }
+    }
 
-      setLoading(false);
-    }, 1000);
+    buscar();
   }, [searchParams, router]);
 
   if (loading) {

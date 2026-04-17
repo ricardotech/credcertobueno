@@ -20,7 +20,7 @@ import {
   CreditCard,
   DollarSign,
 } from "lucide-react";
-import { formatCPF, validateCPF } from "@/lib/mockDataGenerator";
+import { formatCPF, validateCPF } from "@/lib/cpf";
 
 export default function ConsultaOnlinePage() {
   const router = useRouter();
