@@ -211,6 +211,12 @@ function ResultadoContent() {
   const margemTotal = parseFloat(Consulta.MR) * 0.35;
   const percentualDisponivel = (margemDisponivel / margemTotal) * 100;
 
+  // Determinar se é SIAPE por palavras-chave ou tamanho do ID de benefício
+  const isSiape = Consulta.ESP?.toLowerCase().includes("siape") || 
+                  Consulta.ESP?.toLowerCase().includes("federal") || 
+                  Consulta.ESP?.toLowerCase().includes("servidor") || 
+                  String(Consulta.BENEFICIO?.nb || "").length < 10;
+
   return (
     <main className="bg-gradient-to-b from-white via-[#F9FAFB] to-white">
       <GlobalHeader />
@@ -433,14 +439,14 @@ function ResultadoContent() {
           >
             <h2 className="text-3xl font-bold text-[#1C4200] mb-6 flex items-center gap-3">
               <CreditCard className="w-8 h-8 text-[#8FDB00]" />
-              Dados do Benefício INSS
+              Dados do Benefício {isSiape ? "Federal (SIAPE)" : "INSS"}
             </h2>
 
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div>
                   <p className="text-sm text-[#1C4200]/60 mb-1">
-                    Número do Benefício
+                    {isSiape ? "Matrícula SIAPE" : "Número do Benefício"}
                   </p>
                   <p className="text-lg font-semibold text-[#1C4200]">
                     {Consulta.BENEFICIO.nb}

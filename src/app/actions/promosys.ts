@@ -112,27 +112,39 @@ export async function consultarClientePromosys(cpf: string) {
       };
     }
 
-    // Solicita o benefício para processar e consulta
-    const principalNb = beneficios[0];
+    // Avalia todos os benefícios retornados para encontrar o válido ou com melhor margem
+    let melhorConsulta: any = null;
+    let melhorMargem = -1;
 
-    // O Fluxo Offline às vezes exige invocar solicitarBeneficio antes, pode dar Code: 100
-    await solicitarBeneficio(token, principalNb);
+    for (const nb of beneficios) {
+      try {
+        await solicitarBeneficio(token, nb);
+        const dadosConsulta = await consultaOffline(token, nb);
 
-    // Na sequência faz a consulta offline
-    const dadosConsulta = await consultaOffline(token, principalNb);
+        if (dadosConsulta.Code === "000") {
+          const consultaObj = dadosConsulta.Consulta || dadosConsulta;
+          const margem = Number(consultaObj?.BENEFICIO?.ValorLiberadoMargem) || 0;
 
-    if (dadosConsulta.Code === "000") {
-      // Se a estrutura que vier não bater perfeitamente com a que a interface espera,
-      // será necessário remapear ou a UI deverá ser iterada para tratar os campos.
-      // O frontend mockado usava campos ex: Consulta.BENEFICIO.ValorLiberadoMargem
-      // Que parece ser a estrutura real deles.
+          if (margem > melhorMargem) {
+            melhorMargem = margem;
+            melhorConsulta = dadosConsulta;
+          }
+        }
+      } catch (err) {
+        console.error(`Erro ao consultar benefício ${nb}:`, err);
+      }
+    }
+
+    if (melhorConsulta) {
       return {
         Code: "000",
         Msg: "Sucesso",
-        Consulta: dadosConsulta.Consulta || dadosConsulta, // Trata variação caso o PHP não envelope em "Consulta": {}
+        Consulta: melhorConsulta.Consulta || melhorConsulta,
       };
     }
 
+    // Se falhar a busca na lista, tenta uma última consulta no primário
+    const dadosConsulta = await consultaOffline(token, beneficios[0]);
     return dadosConsulta;
   } catch (err: unknown) {
     console.error("Erro em consultarClientePromosys:", err);
