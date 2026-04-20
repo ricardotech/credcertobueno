@@ -395,10 +395,11 @@ export default function CLTFGTSPage() {
               </Link>
             </Button>
             <Button
+              asChild
               variant="outline"
               className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-lg px-10 py-7 rounded-full"
             >
-              Falar com Consultor
+              <Link href="/consulta-online">Falar com Consultor</Link>
             </Button>
           </div>
         </div>
