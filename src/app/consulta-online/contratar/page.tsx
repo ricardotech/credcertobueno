@@ -9,18 +9,13 @@ import { motion } from "framer-motion";
 import {
   CheckCircle2,
   ArrowLeft,
-  DollarSign,
   Calculator,
   FileText,
   User,
   Phone,
   Mail,
-  Upload,
   Shield,
   AlertCircle,
-  CreditCard,
-  Calendar,
-  TrendingDown,
   Award,
   Sparkles,
 } from "lucide-react";

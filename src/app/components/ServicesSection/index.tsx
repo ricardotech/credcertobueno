@@ -14,7 +14,6 @@ interface ServiceCardProps {
   title: string;
   description: string;
   hasLink?: boolean;
-  index: number;
   imageUrl: string;
 }
 
@@ -22,7 +21,6 @@ function ServiceCard({
   title,
   description,
   hasLink = false,
-  index,
   imageUrl,
 }: ServiceCardProps) {
   const ref = useRef(null);
@@ -219,7 +217,6 @@ export default function ServicesSection() {
                   title={service.title}
                   description={service.description}
                   hasLink={service.hasLink}
-                  index={index}
                   imageUrl={service.imageUrl}
                 />
               </SwiperSlide>

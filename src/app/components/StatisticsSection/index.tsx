@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Users, Briefcase, Star, Calendar } from "lucide-react";
+import { Users, Briefcase, Star } from "lucide-react";
 
 interface StatCardProps {
   icon: React.ReactNode;

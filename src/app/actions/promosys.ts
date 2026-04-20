@@ -129,6 +129,7 @@ export async function consultarClientePromosys(cpf: string) {
         
         if (siapeResponse.Code === "000" && Array.isArray(siapeResponse.Consulta) && siapeResponse.Consulta.length > 0) {
           // Busca a matrícula com a melhor margem
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           let melhorSiape: any = siapeResponse.Consulta[0];
           let melhorMargemSiape = -1;
 
@@ -182,6 +183,7 @@ export async function consultarClientePromosys(cpf: string) {
     }
 
     // Avalia todos os benefícios retornados para encontrar o válido ou com melhor margem
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let melhorConsulta: any = null;
     let melhorMargem = -1;
 

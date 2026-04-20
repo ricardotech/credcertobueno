@@ -4,10 +4,9 @@ import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
 import { motion } from "framer-motion";
 import {
-  CheckCircle2,
   Shield,
   TrendingDown,
   FileCheck,
@@ -18,7 +17,6 @@ import {
   MessageCircle,
   Clock,
   MapPin,
-  Award,
 } from "lucide-react";
 
 export default function ServidorMunicipalPage() {

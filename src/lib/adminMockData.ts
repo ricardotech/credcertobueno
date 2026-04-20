@@ -38,6 +38,7 @@ export function gerarListaAdmin(): AdminCPFItem[] {
   ];
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function buscarDadosCompletoCPF(_cpf: string): PromosysResponse | null {
   return null;
 }

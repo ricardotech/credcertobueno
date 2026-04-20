@@ -2,7 +2,6 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import { Search, FileText, CheckCircle, Wallet } from "lucide-react";
 
 interface StepCardProps {
@@ -17,12 +16,9 @@ interface StepCardProps {
 
 function StepCard({
   number,
-  icon,
   title,
   description,
-  imageUrl,
   index,
-  isLast = false,
 }: StepCardProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });

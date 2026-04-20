@@ -2,9 +2,8 @@
 
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
+import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Send } from "lucide-react";
 
 export default function CTAContactSection() {
   const headerRef = useRef(null);
@@ -48,14 +47,7 @@ export default function CTAContactSection() {
     }, 3000);
   };
 
-  const handleWhatsApp = () => {
-    // Replace with your actual WhatsApp number
-    const phoneNumber = "5511999999999";
-    const message = encodeURIComponent(
-      "Olá! Gostaria de saber mais sobre as soluções de crédito da CredCertoBueno."
-    );
-    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
-  };
+
 
   return (
     <section className="relative w-full flex items-center justify-center bg-white py-16 lg:py-24">
