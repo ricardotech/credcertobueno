@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   CheckCircle2,
@@ -17,6 +18,7 @@ import {
   Star,
   Users,
   TrendingDown,
+  ArrowRight,
 } from "lucide-react";
 
 export default function INSSPage() {
@@ -116,6 +118,16 @@ export default function INSSPage() {
                     <span className="text-xl text-[#1C4200] font-medium">{benefit}</span>
                   </div>
                 ))}
+              </div>
+
+              {/* CTA Principal */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Button asChild className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-xl py-8 px-10 rounded-xl shadow-lg hover:scale-105 transition-all">
+                  <Link href="/consulta-online">
+                    Consultar Margem Agora
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
               </div>
 
               {/* Contact Buttons - Destacado */}
