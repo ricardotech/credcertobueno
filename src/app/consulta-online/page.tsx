@@ -242,7 +242,7 @@ export default function ConsultaOnlinePage() {
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <p className="text-center text-sm text-[#1C4200]/60">
                     Ao consultar, você concorda com nossa{" "}
-                    <a href="#" className="text-[#8FDB00] hover:underline">
+                    <a href="/privacy" className="text-[#8FDB00] hover:underline">
                       Política de Privacidade
                     </a>
                   </p>
