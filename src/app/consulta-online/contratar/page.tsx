@@ -672,11 +672,11 @@ function ContratarContent() {
                           <label htmlFor="termos" className="flex-1 cursor-pointer">
                             <span className="text-sm text-[#1C4200]">
                               Li e aceito os{" "}
-                              <a href="#" className="text-[#8FDB00] hover:underline">
+                              <a href="/terms" className="text-[#8FDB00] hover:underline">
                                 termos e condições
                               </a>
                               ,{" "}
-                              <a href="#" className="text-[#8FDB00] hover:underline">
+                              <a href="/privacy" className="text-[#8FDB00] hover:underline">
                                 política de privacidade
                               </a>{" "}
                               e autorizo a CredCertoBueno a utilizar meus dados
