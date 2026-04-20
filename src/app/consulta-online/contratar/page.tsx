@@ -103,14 +103,33 @@ function ContratarContent() {
   const { Consulta } = dados;
   const margemDisponivel = Consulta.BENEFICIO.ValorLiberadoMargem;
 
+  const isSiape =
+    Consulta.ESP?.toLowerCase().includes("siape") ||
+    Consulta.ESP?.toLowerCase().includes("federal") ||
+    Consulta.ESP?.toLowerCase().includes("servidor") ||
+    String(Consulta.BENEFICIO?.nb || "").length < 10;
+
+  // Para SIAPE: taxa 1,80% e prazo fixo de 96 meses
+  // Para INSS: usa taxa e prazo do estado
+  const taxaEfetiva = isSiape ? 1.8 : taxa;
+  const prazoEfetivo = isSiape ? 96 : prazo;
+
   // Cálculos do empréstimo
-  const taxaDecimal = taxa / 100;
-  const fatorMultiplicador = Math.pow(1 + taxaDecimal, prazo);
-  const parcelaMensal =
-    (valorDesejado * taxaDecimal * fatorMultiplicador) /
-    (fatorMultiplicador - 1);
-  const totalAPagar = parcelaMensal * prazo;
-  const totalJuros = totalAPagar - valorDesejado;
+  const taxaDecimal = taxaEfetiva / 100;
+  const fatorMultiplicador = Math.pow(1 + taxaDecimal, prazoEfetivo);
+
+  // SIAPE: margemDisponivel É a parcela (desconto em folha), calcula o valor do empréstimo
+  // INSS: margemDisponivel é o teto; usuário escolhe quanto pegar e calculamos a parcela
+  const parcelaMensal = isSiape
+    ? margemDisponivel
+    : (valorDesejado * taxaDecimal * fatorMultiplicador) / (fatorMultiplicador - 1);
+
+  const valorEmprestimo = isSiape
+    ? (margemDisponivel * (fatorMultiplicador - 1)) / (taxaDecimal * fatorMultiplicador)
+    : valorDesejado;
+
+  const totalAPagar = parcelaMensal * prazoEfetivo;
+  const totalJuros = totalAPagar - valorEmprestimo;
   const cetAno = Math.pow(1 + taxaDecimal, 12) - 1;
 
   const handleValorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -162,19 +181,19 @@ function ContratarContent() {
                 <div className="flex justify-between items-center pb-4 border-b border-gray-200">
                   <span className="text-[#1C4200]/70">Valor Solicitado</span>
                   <span className="text-xl font-bold text-[#1C4200]">
-                    R$ {valorDesejado.toFixed(2).replace(".", ",")}
+                    R$ {valorEmprestimo.toFixed(2).replace(".", ",")}
                   </span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-gray-200">
                   <span className="text-[#1C4200]/70">Parcelas</span>
                   <span className="text-xl font-bold text-[#1C4200]">
-                    {prazo}x de R$ {parcelaMensal.toFixed(2).replace(".", ",")}
+                    {prazoEfetivo}x de R$ {parcelaMensal.toFixed(2).replace(".", ",")}
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-[#1C4200]/70">Taxa de Juros</span>
                   <span className="text-xl font-bold text-[#1C4200]">
-                    {taxa}% a.m.
+                    {taxaEfetiva}% a.m.
                   </span>
                 </div>
               </div>
@@ -306,38 +325,49 @@ function ContratarContent() {
                       {/* Valor Desejado */}
                       <div>
                         <label className="block text-lg font-semibold text-[#1C4200] mb-4">
-                          Quanto você precisa?
+                          {isSiape ? "Valor do Empréstimo" : "Quanto você precisa?"}
                         </label>
-                        <div className="bg-[#F9FAFB] rounded-xl p-6">
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-sm text-[#1C4200]/60">
-                              R$ 100
-                            </span>
-                            <span className="text-2xl font-bold text-[#8FDB00]">
-                              R$ {valorDesejado.toFixed(2).replace(".", ",")}
-                            </span>
-                            <span className="text-sm text-[#1C4200]/60">
-                              R$ {margemDisponivel.toFixed(2).replace(".", ",")}
-                            </span>
+                        {isSiape ? (
+                          <div className="bg-[#F9FAFB] rounded-xl p-6 text-center">
+                            <p className="text-sm text-[#1C4200]/60 mb-2">
+                              Calculado com base na sua margem disponível
+                            </p>
+                            <p className="text-3xl font-bold text-[#1C4200]">
+                              R$ {valorEmprestimo.toFixed(2).replace(".", ",")}
+                            </p>
                           </div>
-                          <input
-                            type="range"
-                            min="100"
-                            max={margemDisponivel}
-                            step="100"
-                            value={valorDesejado}
-                            onChange={handleValorChange}
-                            className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#8FDB00]"
-                          />
-                          <div className="mt-4">
+                        ) : (
+                          <div className="bg-[#F9FAFB] rounded-xl p-6">
+                            <div className="flex items-center justify-between mb-4">
+                              <span className="text-sm text-[#1C4200]/60">
+                                R$ 100
+                              </span>
+                              <span className="text-2xl font-bold text-[#8FDB00]">
+                                R$ {valorDesejado.toFixed(2).replace(".", ",")}
+                              </span>
+                              <span className="text-sm text-[#1C4200]/60">
+                                R$ {margemDisponivel.toFixed(2).replace(".", ",")}
+                              </span>
+                            </div>
                             <input
-                              type="number"
+                              type="range"
+                              min="100"
+                              max={margemDisponivel}
+                              step="100"
                               value={valorDesejado}
                               onChange={handleValorChange}
-                              className="w-full px-4 py-3 text-xl border-2 border-gray-300 rounded-xl focus:outline-none focus:border-[#8FDB00]"
+                              className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#8FDB00]"
                             />
+                            <div className="mt-4">
+                              <input
+                                type="number"
+                                value={valorDesejado}
+                                onChange={handleValorChange}
+                                className="w-full px-4 py-3 text-xl border-2 border-gray-300 rounded-xl focus:outline-none focus:border-[#8FDB00]"
+                              />
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </div>
 
                       {/* Prazo */}
@@ -345,21 +375,29 @@ function ContratarContent() {
                         <label className="block text-lg font-semibold text-[#1C4200] mb-4">
                           Em quantas parcelas?
                         </label>
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                          {[60, 72, 84, 96].map((p) => (
-                            <button
-                              key={p}
-                              onClick={() => setPrazo(p)}
-                              className={`p-4 rounded-xl border-2 font-semibold transition-all ${
-                                prazo === p
-                                  ? "bg-[#8FDB00] border-[#8FDB00] text-black"
-                                  : "bg-white border-gray-300 text-[#1C4200] hover:border-[#8FDB00]"
-                              }`}
-                            >
-                              {p}x
-                            </button>
-                          ))}
-                        </div>
+                        {isSiape ? (
+                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            <div className="p-4 rounded-xl border-2 font-semibold bg-[#8FDB00] border-[#8FDB00] text-black text-center">
+                              96x
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            {[60, 72, 84, 96].map((p) => (
+                              <button
+                                key={p}
+                                onClick={() => setPrazo(p)}
+                                className={`p-4 rounded-xl border-2 font-semibold transition-all ${
+                                  prazo === p
+                                    ? "bg-[#8FDB00] border-[#8FDB00] text-black"
+                                    : "bg-white border-gray-300 text-[#1C4200] hover:border-[#8FDB00]"
+                                }`}
+                              >
+                                {p}x
+                              </button>
+                            ))}
+                          </div>
+                        )}
                       </div>
 
                       {/* Detalhes da Simulação */}
@@ -374,7 +412,7 @@ function ContratarContent() {
                               Valor do Empréstimo
                             </span>
                             <span className="text-xl font-bold text-[#1C4200]">
-                              R$ {valorDesejado.toFixed(2).replace(".", ",")}
+                              R$ {valorEmprestimo.toFixed(2).replace(".", ",")}
                             </span>
                           </div>
                           <div className="flex justify-between items-center pb-4 border-b border-[#8FDB00]/20">
@@ -390,7 +428,7 @@ function ContratarContent() {
                               Número de Parcelas
                             </span>
                             <span className="text-xl font-bold text-[#1C4200]">
-                              {prazo}x
+                              {prazoEfetivo}x
                             </span>
                           </div>
                           <div className="flex justify-between items-center pb-4 border-b border-[#8FDB00]/20">
@@ -398,7 +436,7 @@ function ContratarContent() {
                               Taxa de Juros
                             </span>
                             <span className="text-xl font-bold text-[#1C4200]">
-                              {taxa}% a.m.
+                              {taxaEfetiva}% a.m.
                             </span>
                           </div>
                           <div className="flex justify-between items-center pb-4 border-b border-[#8FDB00]/20">
@@ -420,7 +458,7 @@ function ContratarContent() {
 
                       <Button
                         onClick={() => setStep(2)}
-                        disabled={valorDesejado < 100}
+                        disabled={!isSiape && valorDesejado < 100}
                         className="w-full bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-xl py-8 rounded-xl shadow-lg hover:scale-105 transition-all disabled:opacity-50 disabled:hover:scale-100"
                       >
                         Continuar para Dados
@@ -598,12 +636,12 @@ function ContratarContent() {
                               Valor Solicitado
                             </span>
                             <span className="font-semibold">
-                              R$ {valorDesejado.toFixed(2).replace(".", ",")}
+                              R$ {valorEmprestimo.toFixed(2).replace(".", ",")}
                             </span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-[#1C4200]/70">Parcelas</span>
-                            <span className="font-semibold">{prazo}x</span>
+                            <span className="font-semibold">{prazoEfetivo}x</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-[#1C4200]/70">
@@ -615,7 +653,7 @@ function ContratarContent() {
                           </div>
                           <div className="flex justify-between">
                             <span className="text-[#1C4200]/70">Taxa</span>
-                            <span className="font-semibold">{taxa}% a.m.</span>
+                            <span className="font-semibold">{taxaEfetiva}% a.m.</span>
                           </div>
                           <div className="flex justify-between pt-3 border-t">
                             <span className="text-[#1C4200]/70">
