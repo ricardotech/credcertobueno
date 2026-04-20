@@ -251,7 +251,7 @@ function ResultadoContent() {
           >
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-[#1C4200] mb-2">
-                Sua Margem Disponível
+                Margem de Empréstimo Disponível
               </h2>
               <p className="text-[#1C4200]/70">
                 Valor disponível para novo empréstimo
