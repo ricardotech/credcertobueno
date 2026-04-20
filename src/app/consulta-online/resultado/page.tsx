@@ -265,7 +265,7 @@ function ResultadoContent() {
                   <DollarSign className="w-10 h-10 text-[#8FDB00]" />
                 </div>
                 <p className="text-lg text-[#1C4200]/70 mb-2">
-                  Margem Disponível
+                  MARGEM DE EMPRÉSTIMO DISPONIVEL
                 </p>
                 <p className="text-5xl font-bold text-[#1C4200]">
                   R$ {margemDisponivel.toFixed(2).replace(".", ",")}
@@ -314,29 +314,34 @@ function ResultadoContent() {
             </div>
 
             {margemDisponivel > 100 ? (
-              <div className="mt-8 bg-gradient-to-r from-[#8FDB00]/10 to-[#7BC700]/10 border-2 border-[#8FDB00] p-6 rounded-2xl">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-8 h-8 text-[#8FDB00] flex-shrink-0" />
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-[#1C4200] mb-2">
-                      Você tem margem disponível!
-                    </h3>
-                    <p className="text-[#1C4200]/70 mb-4">
-                      Parabéns! Você pode contratar um novo empréstimo
-                      consignado com as melhores taxas do mercado.
-                    </p>
-                    <Button
-                      onClick={() =>
-                        router.push(
-                          `/consulta-online/contratar?cpf=${Consulta.FULL_CPF}`
-                        )
-                      }
-                      className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg py-6 px-8 rounded-xl shadow-lg hover:scale-105 transition-all"
-                    >
-                      Contratar Agora
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
+              <div className="mt-8 bg-gradient-to-br from-[#1C4200] to-[#2d6800] p-8 rounded-2xl shadow-2xl border-4 border-[#8FDB00]">
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[#8FDB00] rounded-full mb-4 shadow-lg">
+                    <CheckCircle2 className="w-9 h-9 text-[#1C4200]" />
                   </div>
+                  <div className="inline-block bg-[#8FDB00] text-[#1C4200] text-sm font-extrabold px-4 py-1 rounded-full uppercase tracking-widest mb-3">
+                    PRÉ-APROVADO
+                  </div>
+                  <h3 className="text-3xl font-extrabold text-white mb-2">
+                    Parabéns! Você foi APROVADO!
+                  </h3>
+                  <p className="text-white/80 text-base mb-6 max-w-md mx-auto">
+                    Sua análise foi concluída e você está elegível para contratar seu empréstimo consignado agora mesmo. Não perca essa oportunidade!
+                  </p>
+                  <Button
+                    onClick={() =>
+                      router.push(
+                        `/consulta-online/contratar?cpf=${Consulta.FULL_CPF}`
+                      )
+                    }
+                    className="bg-[#8FDB00] hover:bg-[#9FEB10] text-black font-extrabold text-xl py-7 px-12 rounded-xl shadow-xl hover:scale-105 transition-all w-full sm:w-auto"
+                  >
+                    QUERO CONTRATAR AGORA
+                    <ArrowRight className="w-6 h-6 ml-2" />
+                  </Button>
+                  <p className="text-white/50 text-xs mt-4">
+                    Contratação 100% digital e sem burocracia
+                  </p>
                 </div>
               </div>
             ) : (
@@ -633,12 +638,17 @@ function ResultadoContent() {
       <section className="relative w-full py-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="bg-gradient-to-br from-[#1C4200] to-[#2d6800] rounded-3xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Pronto para Contratar?
+            <h2 className="text-4xl font-bold text-white mb-2">
+              {margemDisponivel > 100 ? "Você foi APROVADO!" : "Pronto para Contratar?"}
             </h2>
+            {margemDisponivel > 100 && (
+              <div className="inline-block bg-[#8FDB00] text-[#1C4200] text-sm font-extrabold px-4 py-1 rounded-full uppercase tracking-widest mb-4">
+                PRÉ-APROVADO
+              </div>
+            )}
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               {margemDisponivel > 100
-                ? "Você tem margem disponível! Contrate agora com as melhores taxas do mercado."
+                ? "Sua análise foi concluída com sucesso! Finalize sua contratação agora e receba seu dinheiro rapidinho."
                 : "Entre em contato conosco para verificar outras opções disponíveis para você."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -649,9 +659,9 @@ function ResultadoContent() {
                       `/consulta-online/contratar?cpf=${Consulta.FULL_CPF}`
                     )
                   }
-                  className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-xl py-8 px-12 rounded-xl shadow-xl hover:scale-105 transition-all"
+                  className="bg-[#8FDB00] hover:bg-[#9FEB10] text-black font-extrabold text-xl py-8 px-12 rounded-xl shadow-xl hover:scale-105 transition-all"
                 >
-                  Contratar Agora
+                  QUERO CONTRATAR AGORA
                   <ArrowRight className="w-6 h-6 ml-2" />
                 </Button>
               ) : null}
