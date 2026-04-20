@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   CheckCircle2,
@@ -73,15 +74,18 @@ export default function CLTFGTSPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-8 py-6 rounded-full shadow-xl hover:scale-105 transition-all">
-                  Solicitar Agora
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                <Button asChild className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-8 py-6 rounded-full shadow-xl hover:scale-105 transition-all">
+                  <Link href="/consulta-online">
+                    Solicitar Agora
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
                 </Button>
                 <Button
+                  asChild
                   variant="outline"
                   className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-lg px-8 py-6 rounded-full"
                 >
-                  Simular Crédito
+                  <Link href="/consulta-online">Simular Crédito</Link>
                 </Button>
               </div>
             </motion.div>
@@ -384,15 +388,18 @@ export default function CLTFGTSPage() {
             Junte-se a milhares de trabalhadores que já aproveitaram as melhores taxas do mercado
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-7 rounded-full shadow-xl hover:scale-105 transition-all">
-              Solicitar Agora
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button asChild className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-7 rounded-full shadow-xl hover:scale-105 transition-all">
+              <Link href="/consulta-online">
+                Solicitar Agora
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
             <Button
+              asChild
               variant="outline"
               className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-lg px-10 py-7 rounded-full"
             >
-              Falar com Consultor
+              <Link href="/consulta-online">Falar com Consultor</Link>
             </Button>
           </div>
         </div>

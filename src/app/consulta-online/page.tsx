@@ -119,7 +119,7 @@ export default function ConsultaOnlinePage() {
       <GlobalHeader />
 
       {/* Hero Section com Formulário */}
-      <section className="relative w-full min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[#E8F5E9] to-[#F1F8E9] py-20">
+      <section id="consulta-form" className="relative w-full min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[#E8F5E9] to-[#F1F8E9] py-20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Lado Esquerdo - Informações */}
@@ -362,7 +362,7 @@ export default function ConsultaOnlinePage() {
             asChild
             className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-2xl py-10 px-16 rounded-2xl shadow-xl hover:scale-105 transition-all"
           >
-            <a href="#hero">
+            <a href="#consulta-form">
               <Zap className="w-7 h-7 mr-3" />
               Fazer Consulta Agora
             </a>

@@ -4,6 +4,7 @@ import GlobalHeader from "../components/Header";
 import Footer from "../components/Footer";
 import CreditSimulatorSection from "../components/CreditSimulatorSection";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 import {
@@ -119,15 +120,18 @@ export default function ServidorEstadualPage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
-              <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-7 rounded-lg shadow-xl hover:scale-105 transition-all">
-                Consultar Margem
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <Button asChild className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-7 rounded-lg shadow-xl hover:scale-105 transition-all">
+                <Link href="/consulta-online">
+                  Consultar Margem
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-lg px-10 py-7 rounded-lg"
               >
-                Falar com Especialista
+                <Link href="/consulta-online">Falar com Especialista</Link>
               </Button>
             </motion.div>
 
@@ -233,8 +237,8 @@ export default function ServidorEstadualPage() {
             <p className="text-[#1C4200]/70 mb-6">
               Não encontrou seu estado? Entre em contato!
             </p>
-            <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-6 rounded-lg">
-              Consultar Disponibilidade
+            <Button asChild className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-6 rounded-lg">
+              <Link href="/consulta-online">Consultar Disponibilidade</Link>
             </Button>
           </div>
         </div>
