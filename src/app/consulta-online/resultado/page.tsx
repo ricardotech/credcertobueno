@@ -265,7 +265,7 @@ function ResultadoContent() {
                   <DollarSign className="w-10 h-10 text-[#8FDB00]" />
                 </div>
                 <p className="text-lg text-[#1C4200]/70 mb-2">
-                  Margem Disponível
+                  MARGEM DE EMPRÉSTIMO DISPONIVEL
                 </p>
                 <p className="text-5xl font-bold text-[#1C4200]">
                   R$ {margemDisponivel.toFixed(2).replace(".", ",")}
