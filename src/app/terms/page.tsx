@@ -401,19 +401,19 @@ export default function TermsPage() {
               </li>
               <li>
                 <strong>Telefone:</strong>{" "}
-                <a href="tel:+556233874759" className="text-[#8FDB00] hover:underline">
-                  (62) 3387-4759
+                <a href="https://wa.me/5562994108686" target="_blank" rel="noopener noreferrer" className="text-[#8FDB00] hover:underline">
+                  (62) 99410-8686
                 </a>
               </li>
               <li>
                 <strong>WhatsApp:</strong>{" "}
                 <a
-                  href="https://wa.me/556293338331"
+                  href="https://wa.me/5562994108686"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#8FDB00] hover:underline"
                 >
-                  (62) 93338-8331
+                  (62) 99410-8686
                 </a>
               </li>
               <li>

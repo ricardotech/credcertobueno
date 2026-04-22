@@ -147,22 +147,24 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+556233874759"
-                  className="flex items-start gap-3 text-white/80 hover:text-[#8FDB00] transition-colors duration-200 text-sm group"
-                >
-                  <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:text-[#8FDB00]" />
-                  <span>(62) 3387-4759</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/556293338331"
+                  href="https://wa.me/5562994108686"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-white/80 hover:text-[#8FDB00] transition-colors duration-200 text-sm group"
                 >
                   <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:text-[#8FDB00]" />
-                  <span>WhatsApp: (62) 93338-8331</span>
+                  <span>(62) 99410-8686</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5562994108686"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-white/80 hover:text-[#8FDB00] transition-colors duration-200 text-sm group"
+                >
+                  <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:text-[#8FDB00]" />
+                  <span>WhatsApp: (62) 99410-8686</span>
                 </a>
               </li>
               <li>

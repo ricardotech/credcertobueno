@@ -20,8 +20,8 @@ import {
 } from "lucide-react";
 
 export default function ServidorMunicipalPage() {
-  const whatsappNumber = "556293338331";
-  const callNumber = "+556233874759";
+  const whatsappNumber = "5562994108686";
+  const callNumber = "+5562994108686";
   const whatsappMessage = encodeURIComponent(
     "Olá! Gostaria de solicitar meu crédito consignado."
   );
@@ -374,16 +374,20 @@ export default function ServidorMunicipalPage() {
                 rel="noopener noreferrer"
               >
                 <MessageCircle className="w-6 h-6 mr-3" />
-                WhatsApp: (62) 93338-8331
+                WhatsApp: (62) 99410-8686
               </a>
             </Button>
             <Button
               asChild
               className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-xl py-8 rounded-xl shadow-xl hover:scale-105 transition-all"
             >
-              <a href={`tel:${callNumber}`}>
-                <Phone className="w-6 h-6 mr-3" />
-                Ligar: (62) 3387-4759
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="w-6 h-6 mr-3" />
+                WhatsApp: (62) 99410-8686
               </a>
             </Button>
           </div>

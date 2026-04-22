@@ -19,8 +19,8 @@ import {
 } from "lucide-react";
 
 export default function SeguroFinanciamentoVeicularPage() {
-  const whatsappNumber = "556293338331";
-  const callNumber = "+556233874759";
+  const whatsappNumber = "5562994108686";
+  const callNumber = "+5562994108686";
   const whatsappMessage = encodeURIComponent(
     "Olá! Fui cobrado por seguro no meu financiamento de veículo e quero recuperar o valor."
   );
@@ -157,8 +157,12 @@ export default function SeguroFinanciamentoVeicularPage() {
                   variant="outline"
                   className="border-2 border-[#1C4200] text-[#1C4200] hover:bg-[#1C4200] hover:text-white font-semibold text-lg px-7 py-6 rounded-xl"
                 >
-                  <a href={`tel:${callNumber}`}>
-                    <Phone className="w-5 h-5 mr-2" /> Ligar agora
+                  <a
+                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" /> Falar no WhatsApp
                   </a>
                 </Button>
               </div>
@@ -338,7 +342,13 @@ export default function SeguroFinanciamentoVeicularPage() {
                   variant="outline"
                   className="border-2 border-[#8FDB00] text-[#1C4200] hover:bg-[#8FDB00] hover:text-black font-semibold px-7 py-6 rounded-xl"
                 >
-                  <a href={`tel:${callNumber}`}>Quero falar por telefone</a>
+                  <a
+                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Falar no WhatsApp
+                  </a>
                 </Button>
               </div>
             </div>
@@ -387,8 +397,12 @@ export default function SeguroFinanciamentoVeicularPage() {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-[#1C4200] font-semibold px-7 py-6 rounded-xl"
             >
-              <a href={`tel:${callNumber}`}>
-                <Phone className="w-5 h-5 mr-2" /> Ligar agora
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" /> Falar no WhatsApp
               </a>
             </Button>
           </div>
