@@ -4,9 +4,9 @@
 // Integração real com a API da Promosys
 
 // Credentials (Environment variables)
-const API_USER = process.env.PROMOSYS_USER || "CDBU";
-const API_PASS = process.env.PROMOSYS_PASSWORD || "iUrT15gwY1JUI29Q";
-const BASE_URL = process.env.PROMOSYS_BASE_URL || "https://jcf.promosysweb.com/services";
+const API_USER = process.env.PROMOSYS_USER!;
+const API_PASS = process.env.PROMOSYS_PASSWORD!;
+const BASE_URL = process.env.PROMOSYS_BASE_URL!;
 
 /**
  * Obtém o Token de acesso
