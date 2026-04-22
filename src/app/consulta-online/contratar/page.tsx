@@ -103,11 +103,7 @@ function ContratarContent() {
   const { Consulta } = dados;
   const margemDisponivel = Consulta.BENEFICIO.ValorLiberadoMargem;
 
-  const isSiape =
-    Consulta.ESP?.toLowerCase().includes("siape") ||
-    Consulta.ESP?.toLowerCase().includes("federal") ||
-    Consulta.ESP?.toLowerCase().includes("servidor") ||
-    String(Consulta.BENEFICIO?.nb || "").length < 10;
+  const isSiape = Consulta.ESP === "SIAPE";
 
   // Para SIAPE: taxa 1,80% e prazo fixo de 96 meses
   // Para INSS: usa taxa e prazo do estado
