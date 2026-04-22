@@ -93,7 +93,7 @@ export default function GlobalHeader() {
               </Button>
             </Link>
 
-            <Button className="bg-white border-2 border-[#8FDB00] px-6 py-5 text-[#1C4200] font-semibold hover:bg-[#8FDB00]/10 transition-colors">
+            <Button onClick={() => window.open("https://w.app/tfkx3w", "_blank")} className="bg-white border-2 border-[#8FDB00] px-6 py-5 text-[#1C4200] font-semibold hover:bg-[#8FDB00]/10 transition-colors">
               Fale Conosco
             </Button>
           </div>
@@ -152,7 +152,7 @@ export default function GlobalHeader() {
                 </Button>
               </Link>
 
-              <Button className="bg-white border-2 border-[#8FDB00] w-full text-[#1C4200] font-semibold hover:bg-[#8FDB00]/10">
+              <Button onClick={() => window.open("https://w.app/tfkx3w", "_blank")} className="bg-white border-2 border-[#8FDB00] w-full text-[#1C4200] font-semibold hover:bg-[#8FDB00]/10">
                 Fale Conosco
               </Button>
             </div>
