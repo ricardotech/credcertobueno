@@ -334,7 +334,7 @@ function ResultadoContent() {
                         `/consulta-online/contratar?cpf=${Consulta.FULL_CPF}`
                       )
                     }
-                    className="bg-[#8FDB00] hover:bg-[#9FEB10] text-black font-extrabold text-xl py-7 px-12 rounded-xl shadow-xl hover:scale-105 transition-all w-full sm:w-auto"
+                    className="bg-[#8FDB00] hover:bg-[#9FEB10] text-black font-extrabold text-base sm:text-xl py-5 sm:py-7 px-4 sm:px-12 rounded-xl shadow-xl hover:scale-105 transition-all w-full sm:w-auto"
                   >
                     QUERO CONTRATAR AGORA
                     <ArrowRight className="w-6 h-6 ml-2" />
@@ -637,7 +637,7 @@ function ResultadoContent() {
       {/* CTA */}
       <section className="relative w-full py-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="bg-gradient-to-br from-[#1C4200] to-[#2d6800] rounded-3xl p-12 text-center">
+          <div className="bg-gradient-to-br from-[#1C4200] to-[#2d6800] rounded-3xl p-6 sm:p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-2">
               {margemDisponivel > 100 ? "Você foi APROVADO!" : "Pronto para Contratar?"}
             </h2>
@@ -659,7 +659,7 @@ function ResultadoContent() {
                       `/consulta-online/contratar?cpf=${Consulta.FULL_CPF}`
                     )
                   }
-                  className="bg-[#8FDB00] hover:bg-[#9FEB10] text-black font-extrabold text-xl py-8 px-12 rounded-xl shadow-xl hover:scale-105 transition-all"
+                  className="bg-[#8FDB00] hover:bg-[#9FEB10] text-black font-extrabold text-base sm:text-xl py-6 sm:py-8 px-4 sm:px-12 rounded-xl shadow-xl hover:scale-105 transition-all w-full sm:w-auto"
                 >
                   QUERO CONTRATAR AGORA
                   <ArrowRight className="w-6 h-6 ml-2" />
@@ -667,7 +667,7 @@ function ResultadoContent() {
               ) : null}
               <Button
                 onClick={() => router.push("/consulta-online")}
-                className="bg-white/10 hover:bg-white/20 text-white font-bold text-xl py-8 px-12 rounded-xl border-2 border-white/30 hover:scale-105 transition-all"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold text-base sm:text-xl py-6 sm:py-8 px-4 sm:px-12 rounded-xl border-2 border-white/30 hover:scale-105 transition-all w-full sm:w-auto"
               >
                 <Home className="w-6 h-6 mr-2" />
                 Nova Consulta
