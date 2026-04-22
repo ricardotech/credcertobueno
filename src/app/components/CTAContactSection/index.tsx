@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { IMaskInput } from "react-imask";
 
 export default function CTAContactSection() {
   const headerRef = useRef(null);
@@ -164,12 +165,13 @@ export default function CTAContactSection() {
                   >
                     Telefone (WhatsApp) *
                   </label>
-                  <input
+                  <IMaskInput
+                    mask="(00) 00000-0000"
                     type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
-                    onChange={handleChange}
+                    onAccept={(value) => setFormData((prev) => ({ ...prev, phone: value }))}
                     required
                     className="w-full px-4 py-3 border border-gray-200 focus:border-[#8FDB00] focus:ring-2 focus:ring-[#8FDB00]/20 outline-none transition-all duration-200 bg-white"
                     placeholder="(00) 00000-0000"

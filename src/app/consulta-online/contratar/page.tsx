@@ -22,6 +22,7 @@ import {
 import { formatCPF } from "@/lib/cpf";
 import type { PromosysResponse } from "@/types/promosys";
 import { consultarClientePromosys } from "@/app/actions/promosys";
+import { IMaskInput } from "react-imask";
 
 function ContratarContent() {
   const router = useRouter();
@@ -577,14 +578,15 @@ function ContratarContent() {
                         </label>
                         <div className="relative">
                           <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input
+                          <IMaskInput
+                            mask="(00) 00000-0000"
                             type="tel"
                             required
                             value={formData.telefone}
-                            onChange={(e) =>
+                            onAccept={(value) =>
                               setFormData({
                                 ...formData,
-                                telefone: e.target.value,
+                                telefone: value,
                               })
                             }
                             placeholder="(00) 00000-0000"
