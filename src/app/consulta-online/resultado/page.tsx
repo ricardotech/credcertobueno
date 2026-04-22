@@ -63,7 +63,7 @@ function NotFoundView({ cpf, router }: { cpf: string | null; router: ReturnType<
               <Button
                 onClick={() =>
                   window.open(
-                    "https://wa.me/5562999999999?text=Olá,%20tenho%20interesse%20no%20Empréstimo%20com%20Garantia%20de%20Veículo",
+                    "https://wa.me/5562994108686?text=Olá,%20tenho%20interesse%20no%20Empréstimo%20com%20Garantia%20de%20Veículo",
                     "_blank"
                   )
                 }
@@ -86,7 +86,7 @@ function NotFoundView({ cpf, router }: { cpf: string | null; router: ReturnType<
               <Button
                 onClick={() =>
                   window.open(
-                    "https://wa.me/5562999999999?text=Olá,%20tenho%20interesse%20no%20Empréstimo%20com%20Garantia%20de%20Imóvel",
+                    "https://wa.me/5562994108686?text=Olá,%20tenho%20interesse%20no%20Empréstimo%20com%20Garantia%20de%20Imóvel",
                     "_blank"
                   )
                 }
@@ -109,7 +109,7 @@ function NotFoundView({ cpf, router }: { cpf: string | null; router: ReturnType<
               <Button
                 onClick={() =>
                   window.open(
-                    "https://wa.me/5562999999999?text=Olá,%20tenho%20interesse%20na%20Antecipação%20do%20FGTS",
+                    "https://wa.me/5562994108686?text=Olá,%20tenho%20interesse%20na%20Antecipação%20do%20FGTS",
                     "_blank"
                   )
                 }

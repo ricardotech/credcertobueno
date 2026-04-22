@@ -58,7 +58,7 @@ export default function LocationMapSection() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Telefone",
-      content: "(62) 3098-0000 | WhatsApp: (62) 99999-9999",
+      content: "WhatsApp: (62) 99410-8686",
     },
     {
       icon: <Mail className="w-6 h-6" />,
@@ -145,7 +145,7 @@ export default function LocationMapSection() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-6 h-6" />
-                  <span>(62) 3387-4759 | WhatsApp: (62) 93338-8331</span>
+                  <span>WhatsApp: (62) 99410-8686</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-6 h-6" />
