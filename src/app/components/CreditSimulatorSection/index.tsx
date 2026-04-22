@@ -94,6 +94,16 @@ export default function CreditSimulatorSection({
     return installmentValue.toFixed(2);
   };
 
+  const handleSimulateClick = () => {
+    if (productType === "inss" || productType === "siape") {
+      window.location.href = "/consulta-online";
+    } else {
+      const productLabel = products.find((p) => p.value === productType)?.label || "Outros";
+      const message = encodeURIComponent(`Olá! Fiz uma simulação de Crédito Consignado (${productLabel}) no valor de R$ ${amount.toLocaleString("pt-BR")} em ${installments}x e gostaria de mais informações.`);
+      window.open(`https://wa.me/5562994108686?text=${message}`, "_blank");
+    }
+  };
+
   return (
     <section
       id="simulacao"
@@ -288,7 +298,10 @@ export default function CreditSimulatorSection({
                 </div>
               </div>
 
-              <Button className="w-full bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <Button 
+                onClick={handleSimulateClick}
+                className="w-full bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              >
                 {ctaLabel}
               </Button>
 
