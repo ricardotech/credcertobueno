@@ -49,7 +49,7 @@ export default function HomeHeroSection() {
         "Crédito consignado exclusivo para aposentados e servidores públicos federais. Parcelas descontadas direto do benefício.",
       image: "/hero-section-2.jpg",
       ctaText: "Fale com especialista",
-      ctaLink: "#contato",
+      ctaLink: "https://w.app/tfkx3w",
       highlights: [
         "Aprovação facilitada",
         "Taxas competitivas",
@@ -159,6 +159,14 @@ export default function HomeHeroSection() {
               >
                 <Button
                   size="lg"
+                  onClick={() => {
+                    const link = heroSlides[activeIndex]?.ctaLink;
+                    if (link.startsWith('#')) {
+                      document.querySelector(link)?.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.open(link, '_blank');
+                    }
+                  }}
                   className="group bg-[#8FDB00] hover:bg-[#7BC700] text-black font-semibold text-base lg:text-lg px-8 py-6 lg:py-7 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   {heroSlides[activeIndex]?.ctaText}

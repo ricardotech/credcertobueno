@@ -173,14 +173,15 @@ export default function ConsignedCardSection() {
               }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                Solicitar Cartão
+              <Button asChild className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <a href="https://w.app/tfkx3w" target="_blank" rel="noopener noreferrer">Solicitar Cartão</a>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 className="border-2 border-[#1C4200] text-[#1C4200] hover:bg-[#1C4200] hover:text-white font-semibold text-lg px-8 py-6 rounded-full transition-all duration-300"
               >
-                Saiba Mais
+                <a href="https://w.app/tfkx3w" target="_blank" rel="noopener noreferrer">Saiba Mais</a>
               </Button>
             </motion.div>
           </div>

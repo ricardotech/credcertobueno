@@ -131,7 +131,7 @@ export default function ServidorEstadualPage() {
                 variant="outline"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-lg px-10 py-7 rounded-lg"
               >
-                <Link href="/consulta-online">Falar com Especialista</Link>
+                <a href="https://w.app/tfkx3w" target="_blank" rel="noopener noreferrer">Falar com Especialista</a>
               </Button>
             </motion.div>
 

@@ -345,9 +345,9 @@ export default function SIAPEPage() {
                 </Link>
               </Button>
               <Button asChild variant="outline" className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-lg px-10 py-7 rounded-lg">
-                <Link href="/consulta-online">
+                <a href="https://w.app/tfkx3w" target="_blank" rel="noopener noreferrer">
                   Falar com Especialista
-                </Link>
+                </a>
               </Button>
             </div>
             <p className="text-white/60 text-sm mt-6">

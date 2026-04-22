@@ -139,15 +139,18 @@ export default function ServidorMunicipalPage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
-              <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-7 rounded-lg shadow-xl hover:scale-105 transition-all">
-                Consultar Disponibilidade
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <Button asChild className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-7 rounded-lg shadow-xl hover:scale-105 transition-all">
+                <a href="https://w.app/tfkx3w" target="_blank" rel="noopener noreferrer">
+                  Consultar Disponibilidade
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold text-lg px-10 py-7 rounded-lg"
               >
-                Falar com Consultor
+                <a href="https://w.app/tfkx3w" target="_blank" rel="noopener noreferrer">Falar com Consultor</a>
               </Button>
             </motion.div>
 
@@ -290,8 +293,8 @@ export default function ServidorMunicipalPage() {
             <p className="text-[#1C4200]/70 mb-6 text-lg">
               Sua prefeitura não está na lista? Entre em contato para consultar disponibilidade!
             </p>
-            <Button className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-6 rounded-lg">
-              Consultar Minha Prefeitura
+            <Button asChild className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-10 py-6 rounded-lg">
+              <a href="https://w.app/tfkx3w" target="_blank" rel="noopener noreferrer">Consultar Minha Prefeitura</a>
             </Button>
           </div>
         </div>

@@ -59,7 +59,7 @@ function ServiceCard({
 
         {hasLink && (
           <div>
-            <Button className="w-full justify-center bg-[#8FDB00] hover:bg-[#7BC700] text-black font-semibold transition-all duration-300">
+            <Button onClick={() => window.open("https://w.app/tfkx3w", "_blank")} className="w-full justify-center bg-[#8FDB00] hover:bg-[#7BC700] text-black font-semibold transition-all duration-300">
               Saiba mais
               <svg
                 className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
