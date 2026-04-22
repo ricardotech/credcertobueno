@@ -145,7 +145,7 @@ export default function SeguroFinanciamentoVeicularPage() {
                   className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-lg px-7 py-6 rounded-xl shadow-lg"
                 >
                   <a
-                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    href="https://w.app/tfkx3w"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -158,7 +158,7 @@ export default function SeguroFinanciamentoVeicularPage() {
                   className="border-2 border-[#1C4200] text-[#1C4200] hover:bg-[#1C4200] hover:text-white font-semibold text-lg px-7 py-6 rounded-xl"
                 >
                   <a
-                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    href="https://w.app/tfkx3w"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -330,7 +330,7 @@ export default function SeguroFinanciamentoVeicularPage() {
                   className="bg-[#1C4200] hover:bg-[#163400] text-white font-semibold px-7 py-6 rounded-xl"
                 >
                   <a
-                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    href="https://w.app/tfkx3w"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -343,7 +343,7 @@ export default function SeguroFinanciamentoVeicularPage() {
                   className="border-2 border-[#8FDB00] text-[#1C4200] hover:bg-[#8FDB00] hover:text-black font-semibold px-7 py-6 rounded-xl"
                 >
                   <a
-                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    href="https://w.app/tfkx3w"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -385,7 +385,7 @@ export default function SeguroFinanciamentoVeicularPage() {
               className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold px-7 py-6 rounded-xl"
             >
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                href="https://w.app/tfkx3w"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -398,7 +398,7 @@ export default function SeguroFinanciamentoVeicularPage() {
               className="border-2 border-white text-white hover:bg-white hover:text-[#1C4200] font-semibold px-7 py-6 rounded-xl"
             >
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                href="https://w.app/tfkx3w"
                 target="_blank"
                 rel="noopener noreferrer"
               >

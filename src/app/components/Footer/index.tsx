@@ -138,7 +138,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:contato@credcertobueno.com.br"
+                  href="https://w.app/tfkx3w"
                   className="flex items-start gap-3 text-white/80 hover:text-[#8FDB00] transition-colors duration-200 text-sm group"
                 >
                   <Mail className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:text-[#8FDB00]" />
@@ -147,7 +147,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/5562994108686"
+                  href="https://w.app/tfkx3w"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-white/80 hover:text-[#8FDB00] transition-colors duration-200 text-sm group"
@@ -158,7 +158,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/5562994108686"
+                  href="https://w.app/tfkx3w"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-white/80 hover:text-[#8FDB00] transition-colors duration-200 text-sm group"

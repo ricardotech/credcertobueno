@@ -97,10 +97,14 @@ export default function CreditSimulatorSection({
   const handleSimulateClick = () => {
     if (productType === "inss" || productType === "siape") {
       window.location.href = "/consulta-online";
+    } else if (productType === "governo") {
+      window.open("https://w.app/ii4ndh", "_blank");
+    } else if (productType === "municipal") {
+      window.open("https://w.app/6m2c7s", "_blank");
+    } else if (productType === "clt") {
+      window.open("https://w.app/credcertobueno", "_blank");
     } else {
-      const productLabel = products.find((p) => p.value === productType)?.label || "Outros";
-      const message = encodeURIComponent(`Olá! Fiz uma simulação de Crédito Consignado (${productLabel}) no valor de R$ ${amount.toLocaleString("pt-BR")} em ${installments}x e gostaria de mais informações.`);
-      window.open(`https://wa.me/5562994108686?text=${message}`, "_blank");
+      window.open("https://w.app/tfkx3w", "_blank");
     }
   };
 

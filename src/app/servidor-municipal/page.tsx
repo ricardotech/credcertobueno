@@ -369,7 +369,7 @@ export default function ServidorMunicipalPage() {
               className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-xl py-8 rounded-xl shadow-xl hover:scale-105 transition-all"
             >
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                href="https://w.app/6m2c7s"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -382,7 +382,7 @@ export default function ServidorMunicipalPage() {
               className="bg-[#8FDB00] hover:bg-[#7BC700] text-black font-bold text-xl py-8 rounded-xl shadow-xl hover:scale-105 transition-all"
             >
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                href="https://w.app/6m2c7s"
                 target="_blank"
                 rel="noopener noreferrer"
               >

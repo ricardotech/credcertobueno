@@ -295,7 +295,7 @@ export default function TermsPage() {
               Caso você receba qualquer solicitação de pagamento antecipado em nome da
               CredCertoBueno, desconsidere e reporte imediatamente pelo canal{" "}
               <a
-                href="mailto:contato@credcertobueno.com.br"
+                href="https://w.app/tfkx3w"
                 className="text-[#8FDB00] hover:underline"
               >
                 contato@credcertobueno.com.br
@@ -393,7 +393,7 @@ export default function TermsPage() {
               <li>
                 <strong>E-mail:</strong>{" "}
                 <a
-                  href="mailto:contato@credcertobueno.com.br"
+                  href="https://w.app/tfkx3w"
                   className="text-[#8FDB00] hover:underline"
                 >
                   contato@credcertobueno.com.br
@@ -401,14 +401,14 @@ export default function TermsPage() {
               </li>
               <li>
                 <strong>Telefone:</strong>{" "}
-                <a href="https://wa.me/5562994108686" target="_blank" rel="noopener noreferrer" className="text-[#8FDB00] hover:underline">
+                <a href="https://w.app/tfkx3w" target="_blank" rel="noopener noreferrer" className="text-[#8FDB00] hover:underline">
                   (62) 99410-8686
                 </a>
               </li>
               <li>
                 <strong>WhatsApp:</strong>{" "}
                 <a
-                  href="https://wa.me/5562994108686"
+                  href="https://w.app/tfkx3w"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#8FDB00] hover:underline"
