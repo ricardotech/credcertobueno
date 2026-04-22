@@ -186,7 +186,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/credcertobuenooficial/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
@@ -195,7 +195,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100066893831925"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
@@ -204,7 +204,7 @@ export default function Footer() {
                 <Facebook className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/cred-certo-bueno/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
@@ -213,7 +213,7 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@CredCertoBueno01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-[#8FDB00] transition-all duration-300 group"
