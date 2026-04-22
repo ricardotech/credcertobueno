@@ -121,8 +121,8 @@ export default function StatisticsSection() {
     {
       icon: <Star className="w-8 h-8" />,
       value: "5",
-      label: "Avaliação no Google",
-      suffix: "/5.0",
+      label: "Avaliação no Google (194 avaliações)",
+      suffix: ".0",
     },
   ];
 

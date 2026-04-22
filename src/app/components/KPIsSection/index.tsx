@@ -86,7 +86,7 @@ export default function KPIsSection() {
     },
     {
       prefix: "",
-      value: "4.9",
+      value: "5.0",
       label: "de avaliação no Google",
     },
   ];

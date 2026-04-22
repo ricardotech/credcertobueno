@@ -137,14 +137,56 @@ function ContratarContent() {
     e.preventDefault();
     setSubmitting(true);
 
-    // Simula envio
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      // Prepara os dados para o e-mail
+      const payload = {
+        formData,
+        simulationData: {
+          valorEmprestimo,
+          prazo: prazoEfetivo,
+          parcela: parcelaMensal,
+          taxa: taxaEfetiva,
+          totalPagar: totalAPagar,
+        },
+        clientData: {
+          nome: Consulta.NOME,
+          cpf: Consulta.FULL_CPF,
+          idade: Consulta.IDADE,
+          endereco: Consulta.ENDERECO,
+          bairro: Consulta.BAIRRO,
+          cidade: Consulta.CIDADE,
+          uf: Consulta.UF,
+          cep: Consulta.CEP,
+          beneficioNb: Consulta.BENEFICIO.nb,
+          beneficioSituacao: Consulta.BENEFICIO.situacao,
+          especie: Consulta.ESP,
+          bancoCompleto: Consulta.DADOS_BANCARIOS?.BANCO_COMPLETO || "Não informado",
+          agencia: Consulta.DADOS_BANCARIOS?.AGENCIA || "Não informada",
+          conta: Consulta.DADOS_BANCARIOS?.CONTA || "Não informada",
+          tipoConta: Consulta.DADOS_BANCARIOS?.NOME_TIPO_PAGTO || "Não informado",
+        },
+      };
 
-    setSubmitting(false);
-    setSuccess(true);
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: "smooth" });
+      if (!response.ok) {
+        throw new Error("Falha ao enviar o email");
+      }
+
+      setSuccess(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (error) {
+      console.error("Erro ao enviar proposta:", error);
+      alert("Houve um erro ao enviar sua proposta. Por favor, tente novamente mais tarde ou entre em contato via WhatsApp.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (success) {
