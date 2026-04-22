@@ -56,7 +56,7 @@ export async function POST(request: Request) {
         </p>
         <p style="margin: 0 0 10px 0;">
           <a href="https://credcertobueno.com.br" style="color: ${darkColor}; text-decoration: none; margin: 0 10px;">Acessar Site</a> | 
-          <a href="https://w.app/credcertobueno" style="color: ${darkColor}; text-decoration: none; margin: 0 10px;">Falar no WhatsApp</a>
+          <a href="https://w.app/tfkx3w" style="color: ${darkColor}; text-decoration: none; margin: 0 10px;">Falar no WhatsApp</a>
         </p>
         <p style="margin: 0; color: #a0a0a0;">
           Você está recebendo este e-mail porque realizou uma simulação em nosso site.<br>
@@ -84,6 +84,7 @@ export async function POST(request: Request) {
                 <!-- Header -->
                 <tr>
                   <td style="padding: 32px 32px 24px 32px;">
+                    <img src="https://www.credcertobueno.com.br/icon.png" alt="CredCertoBueno" style="height: 40px; margin-bottom: 20px; display: block;" />
                     <h1 style="margin: 0; font-size: 24px; font-weight: 600; color: ${darkColor};">Nova solicitação recebida</h1>
                     <p style="margin: 8px 0 0 0; font-size: 16px; color: #717171;">O cliente <strong>${nome}</strong> realizou uma simulação.</p>
                   </td>
@@ -160,6 +161,8 @@ export async function POST(request: Request) {
                 <!-- Header -->
                 <tr>
                   <td style="padding: 40px 32px 24px 32px; text-align: center;">
+                    <img src="https://www.credcertobueno.com.br/icon.png" alt="CredCertoBueno" style="height: 48px; margin-bottom: 20px; display: inline-block;" />
+                    <br />
                     <div style="display: inline-block; background-color: #E8F5E9; color: #1C4200; font-size: 12px; font-weight: bold; padding: 6px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px;">
                       Solicitação Recebida
                     </div>
@@ -186,7 +189,7 @@ export async function POST(request: Request) {
                       <p style="margin: 0 0 20px 0; font-size: 15px; color: #717171; line-height: 1.5;">
                         Aguarde nosso contato via WhatsApp para darmos andamento à formalização do seu contrato de forma rápida e segura.
                       </p>
-                      <a href="https://w.app/credcertobueno" style="display: inline-block; background-color: #25D366; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 600; padding: 14px 32px; border-radius: 8px;">
+                      <a href="https://w.app/tfkx3w" style="display: inline-block; background-color: #25D366; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 600; padding: 14px 32px; border-radius: 8px;">
                         Falar com Consultor Agora
                       </a>
                     </div>
