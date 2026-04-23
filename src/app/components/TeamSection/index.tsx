@@ -33,14 +33,13 @@ function TeamMemberCard({ name, role, imageUrl, index }: TeamMemberProps) {
       <div className="relative w-full aspect-square mb-6 overflow-hidden rounded-full bg-gray-50 border-4 border-gray-50 group-hover:border-[#8FDB00]/20 transition-all duration-500 max-w-[200px]">
         <Image
           src={imageUrl}
-          alt={name}
+          alt={role}
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
       </div>
       <div className="text-center z-10">
-        <h3 className="text-2xl font-semibold text-[#1C4200] mb-2">{name}</h3>
         <p className="text-[#1C4200]/60 text-sm tracking-wider uppercase font-medium">{role}</p>
       </div>
     </motion.div>
