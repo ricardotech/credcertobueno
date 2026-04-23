@@ -3,6 +3,7 @@ import HomeHeroSection from "./components/HomeHeroSection";
 import CreditSimulatorSection from "./components/CreditSimulatorSection";
 import StatisticsSection from "./components/StatisticsSection";
 import AboutSection from "./components/AboutSection";
+import TeamSection from "./components/TeamSection";
 import LocationsSection from "./components/LocationsSection";
 import LocationMapSection from "./components/LocationMapSection";
 import ServicesSection from "./components/ServicesSection";
@@ -24,6 +25,7 @@ export default function MainPage() {
       <CreditSimulatorSection />
       <StatisticsSection />
       <AboutSection />
+      <TeamSection />
       <ServicesSection />
       <ConsignedCardSection />
       <DifferentialsSection />
